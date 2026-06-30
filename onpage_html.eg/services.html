@@ -1,0 +1,191 @@
+<style>
+  /* --- 整体背景区块，延续 Work 页面的优雅浅绿色背景 --- */
+  .lf-svc-section {
+    background-color: #eef5eb; 
+    padding: 80px 20px 100px 20px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+  }
+  
+  /* 居中内容容器 */
+  .lf-svc-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* 每个服务版块之间的超大呼吸间距 */
+  }
+
+  /* 页面顶部标题居中介绍 */
+  .lf-svc-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .lf-svc-header-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .lf-svc-header-desc {
+    font-size: 18px;
+    color: #4b5563;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* 左右排版的行 */
+  .lf-svc-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  /* 左右交替反转 */
+  .lf-row-reverse {
+    flex-direction: row-reverse;
+  }
+  
+  /* 文本区 */
+  .lf-svc-text-wrapper {
+    flex: 1;
+  }
+  
+  .lf-svc-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 15px;
+  }
+  
+  .lf-svc-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  
+  .lf-svc-desc {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+  
+  /* 图片区 */
+  .lf-svc-img-wrapper {
+    flex: 1;
+  }
+  
+  .lf-svc-img-wrapper img {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* 绿色按钮样式 */
+  .lf-btn-green {
+    display: inline-block;
+    padding: 14px 36px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: #5ab15a;
+    color: #ffffff !important;
+    border: 2px solid #5ab15a;
+  }
+  
+  .lf-btn-green:hover {
+    background-color: #499849;
+    border-color: #499849;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(90, 177, 90, 0.3);
+  }
+  
+  /* 响应式设计：手机端全部变为上下堆叠 */
+  @media (max-width: 900px) {
+    .lf-svc-row, .lf-row-reverse {
+      flex-direction: column;
+      gap: 40px;
+    }
+    .lf-btn-green {
+      width: 100%;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .lf-svc-container {
+      gap: 80px;
+    }
+    .lf-svc-img-wrapper img {
+      height: auto;
+    }
+  }
+</style>
+
+<div class="lf-svc-section">
+  
+  <div class="lf-svc-header">
+    <h1 class="lf-svc-header-title">Our OEM Services</h1>
+    <p class="lf-svc-header-desc">From double-faced wool coats to down-filled puffers, we engineer Warmth, Structure, and Durability for Global Fashion Brands.</p>
+  </div>
+
+  <div class="lf-svc-container">
+    
+    <!-- 1. Capabilities (图右，文左) -->
+    <div class="lf-svc-row">
+      <div class="lf-svc-text-wrapper">
+        <h2 class="lf-svc-title">Capabilities</h2>
+        <h3 class="lf-svc-subtitle">Where advanced infrastructure meets scalable production.</h3>
+        <p class="lf-svc-desc">Explore our factory environment, equipment depth, and production capacity. From the strategic management at our Guangzhou HQ to our highly coordinated dual-location facilities in Jiangxi and Sichuan, we combine specialized machinery with an expert workforce to build a reliable foundation for your winter collections.</p>
+        <a href="/capabilities" class="lf-btn-green">EXPLORE CAPABILITIES</a>
+      </div>
+      <div class="lf-svc-img-wrapper">
+        <!-- 请填入代表工厂规模/机器设备的图片链接 -->
+        <img src="" alt="Legendfeng Production Capabilities">
+      </div>
+    </div>
+
+    <!-- 2. Craft & Quality (图左，文右) -->
+    <div class="lf-svc-row lf-row-reverse">
+      <div class="lf-svc-text-wrapper">
+        <h2 class="lf-svc-title">Craft & Quality</h2>
+        <h3 class="lf-svc-subtitle">Precision in every stitch. Control at every stage.</h3>
+        <p class="lf-svc-desc">Craft is what we take pride in. Quality is what we never compromise. From the meticulous hand-finishing of double-faced wool to our strict 4-stage AQL inspection system, we turn decades of hands-on experience into flawless garments you can trust.</p>
+        <a href="/craft-quality" class="lf-btn-green">VIEW QUALITY STANDARDS</a>
+      </div>
+      <div class="lf-svc-img-wrapper">
+        <!-- 请填入代表精细缝纫/手工/质检的图片链接 -->
+        <img src="" alt="Legendfeng Craft and Quality Control">
+      </div>
+    </div>
+
+    <!-- 3. Partnership (图右，文左) -->
+    <div class="lf-svc-row">
+      <div class="lf-svc-text-wrapper">
+        <h2 class="lf-svc-title">Partnership</h2>
+        <h3 class="lf-svc-subtitle">Building long-term success through transparency.</h3>
+        <p class="lf-svc-desc">Navigate our streamlined 8-step OEM workflow. From your initial inquiry and tech pack review to fabric sourcing, bulk production, and final shipment, we provide clear guidelines and dedicated support. We are not just your manufacturer—we are your growth partner.</p>
+        <a href="/partnership" class="lf-btn-green">DISCOVER OUR PROCESS</a>
+      </div>
+      <div class="lf-svc-img-wrapper">
+        <!-- 请填入代表商务会议/团队沟通/打包出货的图片链接 -->
+        <img src="" alt="Legendfeng OEM Partnership">
+      </div>
+    </div>
+
+  </div>
+</div>

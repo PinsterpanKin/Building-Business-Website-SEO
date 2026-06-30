@@ -1,0 +1,256 @@
+<style>
+  
+  .lf-collection-section {
+    background-color: #f2f7f2; 
+    padding: 20px 20px 80px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .lf-collection-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .lf-collection-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  
+  .lf-fabric-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px; 
+  }
+
+
+  .lf-fabric-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lf-fabric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+
+  
+  .lf-fabric-card img {
+    width: 100%;
+    height: 260px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #f0f0f0;
+    display: block;
+    cursor: pointer; 
+    transition: opacity 0.3s;
+  }
+
+  .lf-fabric-card img:hover {
+    opacity: 0.85; 
+}
+  
+  .lf-fabric-text {
+    padding: 18px 20px;
+    font-size: 14px;
+    color: #333333;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  
+  @media (max-width: 900px) {
+    .lf-fabric-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 600px) {
+    .lf-fabric-grid { grid-template-columns: 1fr !important; }
+  }
+
+  .lf-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 99999; 
+    padding-top: 5vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(5px); 
+  }
+
+  .lf-lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 75vh;
+    border-radius: 6px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    object-fit: contain;
+    animation: lf-zoom 0.3s ease;
+  }
+
+  #lf-lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    animation: lf-zoom 0.3s ease;
+  }
+
+  .lf-lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lf-lightbox-close:hover {
+    color: #5ab15a; 
+  }
+
+  @keyframes lf-zoom {
+    from {transform: scale(0.9); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+  }
+</style>
+
+<div class="lf-collection-section" id="col">
+  <div class="lf-collection-container">
+    <h2 class="lf-collection-title">Our Fabric Collection</h2>
+    
+    <div class="lf-fabric-grid">
+      <!-- 1 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/1.580.jpeg">
+        <div class="lf-fabric-text">580g 100% wool melton coat fabric</div>
+      </div>
+      <!-- 2 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.450.jpeg">
+        <div class="lf-fabric-text">450g 90% wool 10% cashmere double cloth</div>
+      </div>
+      <!-- 3 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/3.320.jpeg">
+        <div class="lf-fabric-text">320g wool-silk blend suiting for jackets and trousers</div>
+      </div>
+      <!-- 4 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/4.420.jpeg">
+        <div class="lf-fabric-text">420g down-proof nylon for puffer jackets</div>
+      </div>
+      <!-- 5 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/5.500.jpeg">
+        <div class="lf-fabric-text">500g 70% wool 20% polyamide 10% alpaca</div>
+      </div>
+      <!-- 6 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.12.jpeg">
+        <div class="lf-fabric-text">12oz rigid and stretch denim for jeans and jackets</div>
+      </div>
+      <!-- 7 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/7.380.jpeg">
+        <div class="lf-fabric-text">380g cotton-nylon ripstop for cargo pants</div>
+      </div>
+      <!-- 8 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/8.280.jpeg">
+        <div class="lf-fabric-text">280g fleece / sherpa for linings and jackets</div>
+      </div>
+      <!-- 9 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/9.200.jpeg">
+        <div class="lf-fabric-text">200g softshell with TPU membrane</div>
+      </div>
+      <!-- 10 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/10.650.jpeg">
+        <div class="lf-fabric-text">650g boiled wool for structured coats</div>
+      </div>
+      <!-- 11 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/11.100.jpeg">
+        <div class="lf-fabric-text">100% goose down 90/10 (800+ fill power)</div>
+      </div>
+      <!-- 12 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/12.primaloft.png">
+        <div class="lf-fabric-text">Primaloft® Gold synthetic insulation</div>
+      </div>
+      <!-- 13 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/13.3M.png">
+        <div class="lf-fabric-text">3M™ Thinsulate™ for slim thermal applications</div>
+      </div>
+      <!-- 14 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/14.Polartec.png">
+        <div class="lf-fabric-text">Polartec® Alpha active insulation</div>
+      </div>
+      <!-- 15 -->
+      <div class="lf-fabric-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/15.Sorona.png">
+        <div class="lf-fabric-text">Sorona® plant-based fill</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- --- 3. 隐藏的灯箱容器结构 --- -->
+<div id="lf-lightbox" class="lf-lightbox">
+  <span class="lf-lightbox-close">&times;</span>
+  <img class="lf-lightbox-content" id="lf-lightbox-img">
+  <div id="lf-lightbox-caption"></div>
+</div>
+
+<!-- --- 4. 触发放大的交互脚本 --- -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("lf-lightbox");
+    var modalImg = document.getElementById("lf-lightbox-img");
+    var captionText = document.getElementById("lf-lightbox-caption");
+    var images = document.querySelectorAll(".lf-fabric-card img");
+
+    // 遍历所有图片，点击时将图片链接和下方文字填入大灯箱并显示
+    images.forEach(function(img) {
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        // 自动抓取同卡片下 .lf-fabric-text 里的文字作为标题
+        captionText.innerHTML = this.nextElementSibling.innerHTML; 
+      }
+    });
+
+    // 点击右上角X关闭
+    var span = document.getElementsByClassName("lf-lightbox-close");
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+
+    // 点击背景黑底也能关闭
+    modal.onclick = function(e) {
+      if(e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script>

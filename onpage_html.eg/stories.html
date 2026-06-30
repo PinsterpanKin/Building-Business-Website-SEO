@@ -1,0 +1,157 @@
+<style>
+  
+  .lf-insight-section {
+    background-color: #ffffff; 
+    padding: 100px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  
+  .lf-insight-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 80px; 
+  }
+
+
+  .lf-insight-text-wrapper {
+    flex: 1;
+  }
+
+  .lf-insight-tag {
+    font-size: 13px;
+    font-weight: bold;
+    color: #5ab15a; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .lf-insight-title {
+    font-size: 42px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .lf-insight-desc {
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 35px;
+  }
+
+ 
+  .lf-btn-dark {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #5ab15a;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+  }
+
+  .lf-btn-dark:hover {
+    background-color: #499849;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(90, 177, 90, 0.2);
+  }
+
+
+  .lf-insight-img-wrapper {
+    flex: 1;
+  }
+
+  .lf-insight-img-wrapper img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 6px;
+    background-color: #f4f5f7; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  }
+
+
+  @media (max-width: 900px) {
+    .lf-insight-container {
+      flex-direction: column; 
+      gap: 50px;
+      text-align: center;
+    }
+    .lf-insight-img-wrapper img {
+      height: 400px;
+    }
+    .lf-insight-title {
+      font-size: 34px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .lf-insight-img-wrapper img {
+      height: 300px;
+    }
+    .lf-insight-title {
+      font-size: 28px;
+    }
+  }
+
+
+  .lf-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .lf-fade-up.lf-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .lf-delay-1 { transition-delay: 0.2s; }
+</style>
+
+
+<div class="lf-insight-section">
+  <div class="lf-insight-container">
+    
+
+    <div class="lf-insight-text-wrapper lf-fade-up">
+      <span class="lf-insight-tag">Behind The Scenes</span>
+      <h2 class="lf-insight-title">Our Stories & Insights</h2>
+      <p class="lf-insight-desc">Discover the craftsmanship, material innovations, and manufacturing processes that drive LGF Apparel. From the intricate hand-stitching of double-faced wool to navigating the complexities of down-proof construction, explore how we engineer warmth, structure, and durability for global fashion brands.</p>
+      <a href="https://lgfapparel.com/blog" class="lf-btn-dark">READ OUR BLOG</a>
+    </div>
+
+
+    <div class="lf-insight-img-wrapper lf-fade-up lf-delay-1">
+      <img src="https://lgfapparel.com/wp-content/uploads/2026/05/4.jpg" alt="LGF Apparel Manufacturing Stories">
+    </div>
+
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const fadeElements = document.querySelectorAll('.lf-fade-up');
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('lf-visible');
+          observer.unobserve(entry.target); 
+        }
+      });
+    }, { threshold: 0.15 });
+
+    fadeElements.forEach((el) => observer.observe(el));
+  });
+</script>

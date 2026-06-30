@@ -1,0 +1,152 @@
+<style>
+  /* Style settings */
+  .legendfeng-download-section {
+    background-color: #f8f9fa; /* Gray */
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border: 1px solid #eaeaea;
+  }
+  .download-section-title {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  .download-section-desc {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .catalog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .catalog-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #2c3e50; /* Accent color */
+    border-radius: 6px;
+    padding: 25px 20px;
+    width: calc(33.333% - 20px);
+    min-width: 280px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .catalog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  }
+  .catalog-name {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    min-height: 44px; 
+  }
+  .catalog-meta {
+    font-size: 13px;
+    color: #777777;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .meta-tag {
+    background: #f1f1f1;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  .catalog-btn {
+    display: inline-block;
+    background-color: #2c3e50;
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    width: 80%;
+  }
+  .catalog-btn:hover {
+    background-color: #1a252f;
+  }
+  .download-note {
+    font-size: 13px;
+    color: #666666;
+    font-style: italic;
+    background: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px dashed #cccccc;
+  }
+  .download-note a {
+    color: #2c3e50;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  .download-note a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<!-- 下载区容器 -->
+<div class="legendfeng-download-section">
+  <h3 class="download-section-title">Download Our Latest Catalogs</h3>
+  <p class="download-section-desc">Explore our comprehensive fabric and insulation collections. Download the high-resolution Excel catalogs to view detailed specifications.</p>
+  
+  <div class="catalog-grid">
+    <!-- 目录卡片 1 -->
+    <div class="catalog-card">
+      <div class="catalog-name">Winter & Heavyweight Fabric Collection 202601</div>
+      <div class="catalog-meta">
+        <span class="meta-tag">Excel Spreadsheet</span>
+        <span class="meta-tag">512 MB</span>
+      </div>
+      <!-- 需将 href 里的 # 替换为实际的文件链接或网盘链接 -->
+      <a href="#" class="catalog-btn" target="_blank">Download File</a>
+    </div>
+
+    <!-- 目录卡片 2 -->
+    <div class="catalog-card">
+      <div class="catalog-name">Wool, Cashmere & Blends Suiting Collection</div>
+      <div class="catalog-meta">
+        <span class="meta-tag">Excel Spreadsheet</span>
+        <span class="meta-tag">488 MB</span>
+      </div>
+      <!-- 需将 href 里的 # 替换为实际的文件链接或网盘链接 -->
+      <a href="#" class="catalog-btn" target="_blank">Download File</a>
+    </div>
+
+    <!-- 目录卡片 3 -->
+    <div class="catalog-card">
+      <div class="catalog-name">Performance & Insulation Catalog</div>
+      <div class="catalog-meta">
+        <span class="meta-tag">Excel Spreadsheet</span>
+        <span class="meta-tag">420 MB</span>
+      </div>
+      <!-- 需将 href 里的 # 替换为实际的文件链接或网盘链接 -->
+      <a href="#" class="catalog-btn" target="_blank">Download File</a>
+    </div>
+  </div>
+
+  <!-- 底部温馨提示 (针对大文件) -->
+  <div class="download-note">
+    Large files — please contact us for direct transfer if you have difficulty downloading them: <a href="mailto:yanniho@legendfeng.com">yanniho@legendfeng.com</a>
+  </div>
+</div>

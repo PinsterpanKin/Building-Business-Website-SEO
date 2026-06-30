@@ -1,0 +1,278 @@
+<style>
+  /* 页面通用容器 */
+  .legendfeng-partnership-section {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+  }
+  
+  /* 标题样式 */
+  .partnership-title {
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .partnership-desc {
+    text-align: center;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 1. OEM 8步流程卡片网格 (4列x2行) */
+  .workflow-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 60px;
+    justify-content: center;
+  }
+  .workflow-step {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #2c3e50; /* 顶部强调线 */
+    border-radius: 6px;
+    padding: 25px 20px;
+    width: calc(25% - 15px); /* PC端一行放4个 */
+    min-width: 260px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .workflow-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  }
+  .step-number {
+    font-size: 40px;
+    font-weight: 900;
+    color: #2c3e50;
+    opacity: 0.12;
+    margin-bottom: -10px;
+    line-height: 1;
+    text-align: right;
+  }
+  .step-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    min-height: 44px;
+  }
+  .step-list {
+    font-size: 14px;
+    color: #555555;
+    padding-left: 18px;
+    margin: 0;
+  }
+  .step-list li {
+    margin-bottom: 6px;
+  }
+
+  /* 2. 商业指南与 MOQ 表格 */
+  .legendfeng-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 60px;
+  }
+  .legendfeng-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: #ffffff;
+  }
+  .legendfeng-table th, .legendfeng-table td {
+    padding: 16px 20px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  .legendfeng-table th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: 600;
+    width: 30%;
+  }
+  .legendfeng-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+
+  /* 3. FAQ 常见问题区域 */
+  .faq-container {
+    background: #f8f9fa;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    padding: 35px;
+  }
+  .faq-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .faq-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .faq-question {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+  .faq-answer {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+  }
+</style>
+
+<div class="legendfeng-partnership-section">
+
+  <!-- 头部介绍 -->
+  <h2 class="partnership-title">Our OEM Process & Business Guidelines</h2>
+  <p class="partnership-desc">We build long-term relationships based on transparency, quality, and mutual growth. Understand our 8-step OEM workflow and manufacturing guidelines to start your premium outerwear production.</p>
+
+  <!-- 板块 1: PDF原文还原的 8步 OEM 合作流程 -->
+  <div class="workflow-grid">
+    
+    <!-- Step 01 -->
+    <div class="workflow-step">
+      <div class="step-number">01</div>
+      <div class="step-title">Inquiry & Consultation</div>
+      <ul class="step-list">
+        <li>Review design direction, market, and target cost.</li>
+        <li>Confirm preferred fabric options.</li>
+        <li>Assess sample reference and production difficulty.</li>
+      </ul>
+    </div>
+
+    <!-- Step 02 -->
+    <div class="workflow-step">
+      <div class="step-number">02</div>
+      <div class="step-title">Quotation & Sampling</div>
+      <ul class="step-list">
+        <li>Sample development fees may be credited against bulk orders.</li>
+        <li>First sample checks fit and proportion.</li>
+        <li>Revisions lock size, fabric, and trims.</li>
+      </ul>
+    </div>
+
+    <!-- Step 03 -->
+    <div class="workflow-step">
+      <div class="step-number">03</div>
+      <div class="step-title">Order & Contract</div>
+      <ul class="step-list">
+        <li>Confirm specs, quantities, and pricing.</li>
+        <li>Lock payment terms and delivery schedule.</li>
+        <li>Set inspection standards before production.</li>
+      </ul>
+    </div>
+
+    <!-- Step 04 -->
+    <div class="workflow-step">
+      <div class="step-number">04</div>
+      <div class="step-title">Material Sourcing & Pre-Production</div>
+      <ul class="step-list">
+        <li>Inspect incoming fabrics for hidden defects.</li>
+        <li>Complete pre-shrinking or stability treatment.</li>
+        <li>Prepare compatible trims and supporting materials.</li>
+      </ul>
+    </div>
+
+    <!-- Step 05 -->
+    <div class="workflow-step">
+      <div class="step-number">05</div>
+      <div class="step-title">Bulk Production</div>
+      <ul class="step-list">
+        <li>Control fabric tension during cutting.</li>
+        <li>Calibrate machines for fine fabrics.</li>
+        <li>Check key stages during production.</li>
+      </ul>
+    </div>
+
+    <!-- Step 06 -->
+    <div class="workflow-step">
+      <div class="step-number">06</div>
+      <div class="step-title">Quality Control</div>
+      <ul class="step-list">
+        <li>Inspect appearance and workmanship.</li>
+        <li>Check functional details and finishing.</li>
+        <li>Confirm packing quality before shipment.</li>
+      </ul>
+    </div>
+
+    <!-- Step 07 -->
+    <div class="workflow-step">
+      <div class="step-number">07</div>
+      <div class="step-title">Packing & Shipment</div>
+      <ul class="step-list">
+        <li>Prepare hanging or flat-pack options.</li>
+        <li>Add labels and presentation details.</li>
+        <li>Coordinate shipping documents and transport.</li>
+      </ul>
+    </div>
+
+    <!-- Step 08 -->
+    <div class="workflow-step">
+      <div class="step-number">08</div>
+      <div class="step-title">After-Sales Service & Ongoing Partnership</div>
+      <ul class="step-list">
+        <li>Technical files retained for repeat orders.</li>
+        <li>Questions answered within 24 hours.</li>
+        <li>Objective is long-term coordination, not one-time delivery.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- 板块 2: 商业指南参数表 (保留原网站的核心工厂参数) -->
+  <h2 class="partnership-title">Business Guidelines</h2>
+  <div class="legendfeng-table-wrapper">
+    <table class="legendfeng-table">
+      <tbody>
+        <tr>
+          <th>Minimum Order Quantity (MOQ)</th>
+          <td><strong>300 pcs per style per color.</strong> We are flexible with smaller test runs for new clients, though a sampling surcharge may apply.</td>
+        </tr>
+        <tr>
+          <th>Sample Lead Time</th>
+          <td><strong>7–14 days.</strong> Managed directly by our Guangzhou technical team to ensure rapid iteration and perfect pattern making.</td>
+        </tr>
+        <tr>
+          <th>Bulk Production Lead Time</th>
+          <td><strong>45–60 days</strong> (depending on fabric availability and complexity). Down and double-faced wool garments require slower, precision-focused production.</td>
+        </tr>
+        <tr>
+          <th>Quality Standard</th>
+          <td><strong>AQL 2.5 / 4.0.</strong> We enforce a strict 4-stage inspection process (Incoming, In-process, Final, Pre-shipment). We welcome third-party inspections.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 板块 3: 常见问题 FAQ (保留客户最关心的知识点) -->
+  <h2 class="partnership-title">Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">Can you source specific down insulation and premium wool for our brand?</div>
+      <div class="faq-answer">Yes. Our sourcing team has deep relationships with top-tier suppliers across Inner Mongolia, Shandong, and Jiangsu. We can procure RDS-certified down (up to 900+ Fill Power), cashmere, and technical performance fabrics.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Do you sign Non-Disclosure Agreements (NDAs)?</div>
+      <div class="faq-answer">Absolutely. We strictly protect our clients' intellectual property. Your designs, tech packs, and patterns will remain completely confidential and will not be shared or reproduced for other parties.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Where will my garments be produced?</div>
+      <div class="faq-answer">Sampling, cutting, finishing, and QA are strictly handled at our Guangzhou HQ. Bulk sewing is allocated between our Guangzhou factory and our long-term partner facilities in Jiangxi and Sichuan, ensuring competitive pricing without compromising quality.</div>
+    </div>
+  </div>
+
+</div>

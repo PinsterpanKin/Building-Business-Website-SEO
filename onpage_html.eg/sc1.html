@@ -1,0 +1,87 @@
+<style>
+  .lf-gallery-section {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 60px auto;
+    overflow: hidden; 
+    padding: 0 15px;
+  }
+  
+  .lf-gallery-title {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+
+  .lf-marquee-wrapper {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+
+  .lf-marquee-track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+  
+    animation: lf-scroll 25s linear infinite;
+  }
+
+
+  .lf-marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes lf-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+  }
+
+
+  .lf-gallery-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border: 2px solid #ffffff;
+    transition: transform 0.3s ease;
+  }
+
+  .lf-gallery-img:hover {
+    transform: scale(1.03); 
+  }
+</style>
+
+
+<div class="lf-gallery-section">
+  <h2 class="lf-gallery-title">Inside Our Production Lines</h2>
+  
+  <div class="lf-marquee-wrapper">
+
+    <div class="lf-marquee-track">
+      
+      <!--first--> 
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/1.jpg" alt="Manufacturing shop in Guangzhou Zhushan Industrial Park">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/2.jpg" alt="Our staff working in a small workshop in Guangzhou">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/3.jpg" alt="Our staff packing the products for delivery">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/4.jpg" alt="Workshop workers sewing garments in bulk">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/5.jpg" alt="An overview of our workshop with sewing lines and workers">
+
+      <!--second-->
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/1.jpg" alt="Manufacturing shop in Guangzhou Zhushan Industrial Park">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/2.jpg" alt="Our staff working in a small workshop in Guangzhou">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/3.jpg" alt="Our staff packing the products for delivery">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/4.jpg" alt="Workshop workers sewing garments in bulk">
+      <img class="lf-gallery-img" src="http://lgfapparel.com/wp-content/uploads/2026/05/5.jpg" alt="An overview of our workshop with sewing lines and workers">
+      
+    </div>
+  </div>
+</div>

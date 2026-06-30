@@ -1,0 +1,727 @@
+<style>
+  /* Style setting */
+  .legendfeng-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 40px;
+    font-family: Arial, sans-serif;
+  }
+  .legendfeng-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333333;
+  }
+  .legendfeng-table th, .legendfeng-table td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  .legendfeng-table th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+  .legendfeng-table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  .legendfeng-table td strong {
+    color: #2c3e50;
+  }
+  .table-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  .table-desc {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+</style>
+
+<!-- ========================================== -->
+<!-- 1. Fabric Selection Guide -->
+<!-- ========================================== -->
+<div class="legendfeng-table-wrapper">
+  <h3 class="table-title">Fabric Selection Guide</h3>
+  <table class="legendfeng-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Sub-Category</th>
+        <th>Best For</th>
+        <th>Key Properties</th>
+        <th>Weight / Fill Range</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Natural Fiber -->
+      <tr>
+        <td><strong>Natural Fiber</strong></td>
+        <td>Wool (Merino, Lambswool, Shetland)</td>
+        <td>Coats, jackets, suiting, sweaters</td>
+        <td>Warm, breathable, elastic</td>
+        <td>280–750 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cashmere</td>
+        <td>Luxury coats, sweaters, accessories</td>
+        <td>Ultra-soft, lightweight, warm</td>
+        <td>250–600 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Alpaca</td>
+        <td>Coats, jackets, sweaters</td>
+        <td>Warmer than wool, silky, lightweight</td>
+        <td>300–550 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Mohair</td>
+        <td>Jackets, sweaters, overcoats</td>
+        <td>Lustrous, fluffy, insulating</td>
+        <td>350–600 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Angora</td>
+        <td>Luxury knitwear, sweaters</td>
+        <td>Extremely soft, fluffy, warm</td>
+        <td>200–450 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Camel Hair</td>
+        <td>Overcoats, jackets</td>
+        <td>Lightweight, smooth, warm</td>
+        <td>400–700 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Yak</td>
+        <td>High-end outerwear, sweaters</td>
+        <td>Soft, warm, durable</td>
+        <td>350–600 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton (Heavyweight / Twill / Denim)</td>
+        <td>Jackets, cargo pants, jeans</td>
+        <td>Breathable, sturdy, easy care</td>
+        <td>200–450 g/m² / 10–14 oz</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Linen</td>
+        <td>Summer jackets, shirts</td>
+        <td>Breathable, crisp</td>
+        <td>150–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Silk</td>
+        <td>Linings, base layers, blouses</td>
+        <td>Soft, lustrous, drapes well</td>
+        <td>6–22 mm</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hemp</td>
+        <td>Jackets, trousers, shirts</td>
+        <td>Strong, breathable, eco-friendly</td>
+        <td>180–350 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Down / Feather (as fill)</td>
+        <td>Puffer jackets, coats, vests</td>
+        <td>Highest warmth-to-weight ratio</td>
+        <td>500–900 fill power</td>
+      </tr>
+
+      <!-- Blends -->
+      <tr>
+        <td><strong>Blends</strong></td>
+        <td>Wool-Cashmere</td>
+        <td>Luxury coats, jackets</td>
+        <td>Soft + durable balance</td>
+        <td>300–600 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool-Silk</td>
+        <td>Suiting, dresses, jackets</td>
+        <td>Smooth, breathable, drapes well</td>
+        <td>250–450 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool-Cotton</td>
+        <td>Jackets, trousers</td>
+        <td>Breathable + structured</td>
+        <td>280–500 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool-Linen</td>
+        <td>Summer suits, jackets</td>
+        <td>Crisp, cool, textured</td>
+        <td>220–350 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool-Polyester</td>
+        <td>Outerwear, uniforms</td>
+        <td>Durable, wrinkle-resistant</td>
+        <td>300–550 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool-Nylon</td>
+        <td>Performance outerwear</td>
+        <td>Abrasion-resistant, strong</td>
+        <td>300–500 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cashmere-Silk</td>
+        <td>Luxury knitwear, scarves</td>
+        <td>Soft, lightweight, lustrous</td>
+        <td>180–350 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cashmere-Cotton</td>
+        <td>Light sweaters, cardigans</td>
+        <td>Soft + breathable</td>
+        <td>200–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton-Polyester</td>
+        <td>Shirts, jackets, pants</td>
+        <td>Easy care, durable</td>
+        <td>180–350 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton-Elastane / Lycra</td>
+        <td>Stretch denim, fitted pants</td>
+        <td>Stretch, good recovery</td>
+        <td>10–14 oz + 2–5% elastane</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton-Linen</td>
+        <td>Summer shirts, jackets</td>
+        <td>Breathable, textured</td>
+        <td>150–280 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton-Modal / Tencel</td>
+        <td>Soft tops, loungewear</td>
+        <td>Soft, smooth, breathable</td>
+        <td>120–220 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Viscose-Polyester / Nylon</td>
+        <td>Linings, dresses, blouses</td>
+        <td>Fluid, durable</td>
+        <td>80–180 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Acrylic-Wool / Cotton</td>
+        <td>Affordable sweaters, outerwear</td>
+        <td>Warm, lightweight</td>
+        <td>250–450 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Nylon-Cotton</td>
+        <td>Cargo pants, workwear jackets</td>
+        <td>Strong, durable</td>
+        <td>250–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hemp-Cotton / Tencel</td>
+        <td>Eco-friendly shirts, jackets</td>
+        <td>Breathable, sustainable</td>
+        <td>180–320 g/m²</td>
+      </tr>
+
+      <!-- Synthetic Fibers -->
+      <tr>
+        <td><strong>Synthetic Fibers</strong></td>
+        <td>Polyester</td>
+        <td>Shells, linings, fleece, insulation</td>
+        <td>Durable, quick-dry, affordable</td>
+        <td>40–300 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Nylon</td>
+        <td>Shells, ripstop, linings</td>
+        <td>Strong, abrasion-resistant</td>
+        <td>30–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Acrylic</td>
+        <td>Sweaters, scarves, hats</td>
+        <td>Wool-like, lightweight</td>
+        <td>200–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Viscose / Rayon</td>
+        <td>Linings, dresses, blouses</td>
+        <td>Smooth, drapes well</td>
+        <td>80–180 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Modal</td>
+        <td>Base layers, loungewear</td>
+        <td>Soft, breathable</td>
+        <td>100–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Lyocell / Tencel</td>
+        <td>Blouses, dresses, linings</td>
+        <td>Eco-friendly, smooth</td>
+        <td>100–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cupro</td>
+        <td>Linings, dresses</td>
+        <td>Silk-like, breathable</td>
+        <td>80–150 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Acetate</td>
+        <td>Linings, luxury dresses</td>
+        <td>Lustrous, drapes well</td>
+        <td>80–160 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Elastane / Spandex / Lycra</td>
+        <td>Stretch fabrics, activewear</td>
+        <td>High stretch and recovery</td>
+        <td>2–10% blend</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Polyamide</td>
+        <td>Performance outerwear, stretch</td>
+        <td>Strong, elastic</td>
+        <td>30–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Polypropylene</td>
+        <td>Thermal base layers</td>
+        <td>Moisture-wicking, lightweight</td>
+        <td>80–150 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Metallic Fiber</td>
+        <td>Decorative fabrics, evening wear</td>
+        <td>Shiny, reflective</td>
+        <td>Varies</td>
+      </tr>
+
+      <!-- Performance Fabrics -->
+      <tr>
+        <td><strong>Performance Fabrics</strong></td>
+        <td>Fleece (Micro / Polar / Sherpa)</td>
+        <td>Jacket linings, midlayers, jackets</td>
+        <td>Warm, soft, breathable</td>
+        <td>150–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Softshell</td>
+        <td>Active outerwear, jackets</td>
+        <td>Wind-resistant, breathable, stretch</td>
+        <td>200–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hardshell</td>
+        <td>Rainwear, ski jackets</td>
+        <td>Waterproof, breathable</td>
+        <td>100–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Windproof Fabric</td>
+        <td>Outerwear, vests</td>
+        <td>Blocks wind, breathable</td>
+        <td>60–150 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Waterproof / Breathable Membrane (TPU / PTFE)</td>
+        <td>Rain jackets, ski wear</td>
+        <td>Fully waterproof, breathable</td>
+        <td>80–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Ripstop (Nylon / Poly)</td>
+        <td>Shells, outdoor pants, bags</td>
+        <td>Tear-resistant, lightweight</td>
+        <td>40–160 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Stretch Woven</td>
+        <td>Pants, jackets, activewear</td>
+        <td>Mobility + structure</td>
+        <td>180–350 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Thermal / Brushed Back</td>
+        <td>Jackets, hoodies, pants</td>
+        <td>Traps heat, soft inside</td>
+        <td>200–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Quilted Fabric (with down / synthetic fill)</td>
+        <td>Light puffers, liners, vests</td>
+        <td>Insulated, lightweight</td>
+        <td>100–250 g/m² + fill</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Down-Proof Fabric</td>
+        <td>Puffer jackets, down coats</td>
+        <td>Tight weave, prevents leakage</td>
+        <td>40–80 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Merino Tech (performance-grade)</td>
+        <td>Base layers, midlayers</td>
+        <td>Warm, moisture-wicking, odor-resistant</td>
+        <td>150–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Moisture-Wicking Polyester</td>
+        <td>Active tops, base layers</td>
+        <td>Wicks sweat, dries fast</td>
+        <td>120–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Anti-Pilling Knit</td>
+        <td>Sweaters, cardigans</td>
+        <td>Resists pilling, durable</td>
+        <td>200–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Abrasion-Resistant Fabric</td>
+        <td>Workwear, outdoor pants</td>
+        <td>High durability</td>
+        <td>250–500 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>UV-Protection Fabric</td>
+        <td>Summer jackets, shirts</td>
+        <td>Blocks UV, breathable</td>
+        <td>120–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Odor-Resistant Fabric (Silver / Chitosan)</td>
+        <td>Base layers, activewear</td>
+        <td>Reduces odor</td>
+        <td>120–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Recycled Performance Fabric (rPET / recycled nylon)</td>
+        <td>Eco-friendly outerwear, shells</td>
+        <td>Sustainable, durable</td>
+        <td>40–250 g/m²</td>
+      </tr>
+
+      <!-- Insulation & Fill -->
+      <tr>
+        <td><strong>Insulation & Fill</strong></td>
+        <td>Goose Down (90/10, 80/20, 70/30)</td>
+        <td>High-end puffers, coats</td>
+        <td>Best warmth-to-weight</td>
+        <td>500–900+ fill power</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Duck Down</td>
+        <td>Puffers, jackets</td>
+        <td>Good warmth, affordable</td>
+        <td>500–700 fill power</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>White / Grey Down</td>
+        <td>All down garments</td>
+        <td>Aesthetic choice</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Feather (small / large)</td>
+        <td>Comforters, budget jackets</td>
+        <td>Less warm, more weight</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Primaloft (Gold / Silver / Black)</td>
+        <td>Synthetic puffers, gloves</td>
+        <td>Warm when wet, lightweight</td>
+        <td>60–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3M Thinsulate</td>
+        <td>Slim thermal jackets, gloves</td>
+        <td>Thin, warm</td>
+        <td>40–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Thermolite</td>
+        <td>Jackets, sleeping bags</td>
+        <td>Lightweight, affordable</td>
+        <td>60–180 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Polartec Alpha</td>
+        <td>Active insulation</td>
+        <td>Breathable, quick-dry</td>
+        <td>60–120 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Octa (hollow fiber)</td>
+        <td>Lightweight puffers</td>
+        <td>Warm, compressible</td>
+        <td>40–100 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Clo / Vivo (by Emit)</td>
+        <td>Eco-friendly insulation</td>
+        <td>Plant-based, warm</td>
+        <td>60–150 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Recycled Synthetic Down (rPET)</td>
+        <td>Sustainable puffers</td>
+        <td>Eco-friendly, warm</td>
+        <td>80–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Wool Batting (compressed)</td>
+        <td>Natural fill coats</td>
+        <td>Breathable, warm</td>
+        <td>150–400 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Cotton Batting</td>
+        <td>Light jackets</td>
+        <td>Natural, affordable</td>
+        <td>150–300 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Kapok</td>
+        <td>Eco-friendly jackets</td>
+        <td>Natural, buoyant</td>
+        <td>80–200 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Eiderdown</td>
+        <td>Ultra-luxury segment</td>
+        <td>Rarest, warmest down</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Sorona (DuPont plant-based)</td>
+        <td>Sustainable puffers</td>
+        <td>Plant-based, resilient</td>
+        <td>60–180 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Tencel Fill</td>
+        <td>Eco-friendly coats</td>
+        <td>Soft, breathable</td>
+        <td>100–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Hemp Fill</td>
+        <td>Natural insulation</td>
+        <td>Sustainable, breathable</td>
+        <td>100–250 g/m²</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Recycled Down (certified)</td>
+        <td>Eco-friendly luxury</td>
+        <td>Sustainable + high performance</td>
+        <td>550–800 fill power</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>Bio-based Synthetic Fill (castor bean, corn)</td>
+        <td>Next-gen sustainable</td>
+        <td>Renewable, high performance</td>
+        <td>60–160 g/m²</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ========================================== -->
+<!-- 2. Fabric Care Guide -->
+<!-- ========================================== -->
+<div class="legendfeng-table-wrapper">
+  <h3 class="table-title">Fabric Care Guide</h3>
+  <p class="table-desc">A quick reference for washing, drying, ironing, and storing premium mid-weight to heavy-weight fabrics and insulated garments — helping your end consumers maintain quality and longevity.</p>
+  <table class="legendfeng-table">
+    <thead>
+      <tr>
+        <th>Fabric / Fill Type</th>
+        <th>Washing</th>
+        <th>Drying</th>
+        <th>Ironing</th>
+        <th>Special Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Wool / Cashmere / Alpaca / Mohair</strong></td>
+        <td>Dry clean preferred / Cold hand wash</td>
+        <td>Lay flat to dry</td>
+        <td>Low heat, use pressing cloth</td>
+        <td>Avoid agitation; store folded</td>
+      </tr>
+      <tr>
+        <td><strong>Double-Faced Wool</strong></td>
+        <td>Dry clean only</td>
+        <td>Lay flat</td>
+        <td>Low heat, press on wrong side</td>
+        <td>Professional care recommended</td>
+      </tr>
+      <tr>
+        <td><strong>Down / Feather Fill</strong></td>
+        <td>Machine wash gentle / Cold</td>
+        <td>Tumble dry low with tennis balls</td>
+        <td>Do not iron</td>
+        <td>Ensure fully dry to prevent clumping</td>
+      </tr>
+      <tr>
+        <td><strong>Synthetic Down (Primaloft / Thinsulate)</strong></td>
+        <td>Machine wash gentle / Warm</td>
+        <td>Tumble dry low</td>
+        <td>Do not iron</td>
+        <td>Do not use fabric softener</td>
+      </tr>
+      <tr>
+        <td><strong>Down-Proof / Puffer Shell</strong></td>
+        <td>Machine wash gentle / Cold</td>
+        <td>Tumble dry low</td>
+        <td>Do not iron</td>
+        <td>Zip all closures before washing</td>
+      </tr>
+      <tr>
+        <td><strong>Performance / Membrane (Softshell / Hardshell)</strong></td>
+        <td>Machine wash gentle / No fabric softener</td>
+        <td>Air dry or tumble low</td>
+        <td>Do not iron</td>
+        <td>Reapply DWR coating as needed</td>
+      </tr>
+      <tr>
+        <td><strong>Fleece (Micro / Polar / Sherpa)</strong></td>
+        <td>Machine wash / Cold</td>
+        <td>Tumble dry low</td>
+        <td>Do not iron</td>
+        <td>Wash inside out to reduce pilling</td>
+      </tr>
+      <tr>
+        <td><strong>Denim</strong></td>
+        <td>Machine wash inside out / Cold</td>
+        <td>Air dry</td>
+        <td>Warm iron</td>
+        <td>Wash sparingly to preserve color</td>
+      </tr>
+      <tr>
+        <td><strong>Heavy Cotton / Ripstop</strong></td>
+        <td>Machine wash / Warm</td>
+        <td>Tumble dry medium</td>
+        <td>High heat if needed</td>
+        <td>Expect slight shrinkage on first wash</td>
+      </tr>
+      <tr>
+        <td><strong>Wool Batting / Cotton Batting</strong></td>
+        <td>Dry clean recommended</td>
+        <td>Lay flat</td>
+        <td>Low heat</td>
+        <td>Avoid machine washing</td>
+      </tr>
+      <tr>
+        <td><strong>Kapok / Hemp Fill</strong></td>
+        <td>Dry clean only</td>
+        <td>—</td>
+        <td>—</td>
+        <td>Natural fibers; professional care only</td>
+      </tr>
+      <tr>
+        <td><strong>Sorona / Bio-based Fill</strong></td>
+        <td>Machine wash gentle / Cold</td>
+        <td>Tumble dry low</td>
+        <td>Do not iron</td>
+        <td>Follow synthetic down guidelines</td>
+      </tr>
+      <tr>
+        <td><strong>Blends</strong></td>
+        <td>Follow care of more delicate fiber</td>
+        <td>—</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,268 @@
+<style>
+  /* --- 1. Worsted & Woollen 页面整体背景与排版 --- */
+  .lf-ww-section {
+    background-color: #ffffff; /* 纯白底色，突出西装与精纺面料的高级质感 */
+    padding: 80px 20px 100px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .lf-ww-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .lf-ww-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .lf-ww-title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .lf-ww-subtitle {
+    font-size: 16px;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* --- 2. 专为 8 张图定制的 4列完美对称网格布局 (4x2) --- */
+  .lf-ww-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* 4列等分，展现严谨的西装定制感 */
+    gap: 30px; 
+  }
+
+  /* 图片卡片基础特效（包含图片与下方文本） */
+  .lf-ww-card {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lf-ww-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  }
+
+  /* 图片尺寸固定，确保网格绝对对齐 */
+  .lf-ww-card img {
+    width: 100%;
+    height: 380px; /* 适合4列宽度的绝佳纵横比 */
+    object-fit: cover; 
+    display: block;
+    cursor: pointer; 
+    transition: opacity 0.3s;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  .lf-ww-card img:hover {
+    opacity: 0.85; /* 交互暗示可点击 */
+  }
+
+  /* 卡片底部文本区 (AI 描述) */
+  .lf-ww-text {
+    padding: 16px 15px;
+    font-size: 14px;
+    color: #333333;
+    font-weight: 600;
+    text-align: center;
+    background-color: #ffffff;
+    flex-grow: 1; /* 确保文字区高度自动撑满对齐 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* --- 3. 响应式调整 --- */
+  /* 平板端 (小于 900px) 变为两列布局 (即2x4排列) */
+  @media (max-width: 900px) {
+    .lf-ww-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .lf-ww-card img {
+      height: 450px; 
+    }
+  }
+  
+  /* 手机端 (小于 600px) 变为单列布局 */
+  @media (max-width: 600px) {
+    .lf-ww-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .lf-ww-card img {
+      height: 420px; 
+    }
+  }
+
+  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
+  .lf-ww-lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 99999; 
+    padding-top: 4vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(5px); 
+  }
+
+  .lf-ww-lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 75vh;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    object-fit: contain;
+    animation: lf-ww-zoom 0.3s ease; 
+  }
+
+  /* 灯箱放大时的底部文字说明 */
+  #lf-ww-lightbox-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ffffff;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    animation: lf-ww-zoom 0.3s ease;
+  }
+
+  .lf-ww-lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lf-ww-lightbox-close:hover {
+    color: #5ab15a; 
+  }
+
+  @keyframes lf-ww-zoom {
+    from {transform: scale(0.9); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+  }
+</style>
+
+<!-- 展示容器 -->
+<div class="lf-ww-section">
+  <div class="lf-ww-container">
+    
+    <!-- 页头介绍 -->
+    <div class="lf-ww-header">
+      <h1 class="lf-ww-title">Worsted & Woollen</h1>
+      <p class="lf-ww-subtitle">Flawless tailoring for suits, trousers & coats. Built for precision fit and longevity, our tailoring capabilities shine in worsted and woollen garments with strictly structured waistbands and reinforced construction.</p>
+    </div>
+    
+    <!-- 4x2 网格图片与描述区 -->
+    <div class="lf-ww-grid">
+      
+      <!-- Item 1 (多色合并) -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.1.png">
+        <div class="lf-ww-text">Women's Wool Coats (Burgundy & Dark Brown)</div>
+      </div>
+      <!-- Item 2 (多色合并) -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.2.png">
+        <div class="lf-ww-text">Women's Wool Blazers (Navy, Brown & Cream)</div>
+      </div>
+      <!-- Item 3 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.3.png">
+        <div class="lf-ww-text">Men's Tailored Vest (Navy Blue)</div>
+      </div>
+      <!-- Item 4 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.4.png">
+        <div class="lf-ww-text">Women's Tailored Vest (Black, Silver Buttons)</div>
+      </div>
+      
+      <!-- Item 5 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.5.png">
+        <div class="lf-ww-text">Women's Double-Breasted Jacket (Navy Blue)</div>
+      </div>
+      <!-- Item 6 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.6.png">
+        <div class="lf-ww-text">Men's Herringbone Suit Jacket (Charcoal Grey)</div>
+      </div>
+      <!-- Item 7 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.7.png">
+        <div class="lf-ww-text">Men's Tailored Blazer (Navy Blue, Red Lining)</div>
+      </div>
+      <!-- Item 8 -->
+      <div class="lf-ww-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.8.png">
+        <div class="lf-ww-text">Men's Classic Suit Jacket (Mid Grey)</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- 隐藏的灯箱结构 -->
+<div id="lf-ww-lightbox" class="lf-ww-lightbox">
+  <span class="lf-ww-lightbox-close">&times;</span>
+  <img class="lf-ww-lightbox-content" id="lf-ww-lightbox-img">
+  <div id="lf-ww-lightbox-caption"></div>
+</div>
+
+<!-- 灯箱交互脚本 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("lf-ww-lightbox");
+    var modalImg = document.getElementById("lf-ww-lightbox-img");
+    var captionText = document.getElementById("lf-ww-lightbox-caption");
+    var images = document.querySelectorAll(".lf-ww-card img");
+
+    // 遍历所有图片，点击时加载大图并同步底部文字
+    images.forEach(function(img) {
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        // 抓取同层级的文字描述，放入灯箱说明中
+        captionText.innerHTML = this.nextElementSibling.innerHTML; 
+      }
+    });
+
+    // 点击 X 关闭
+    var span = document.getElementsByClassName("lf-ww-lightbox-close");
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+
+    // 点击背景黑底也能关闭
+    modal.onclick = function(e) {
+      if(e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script>

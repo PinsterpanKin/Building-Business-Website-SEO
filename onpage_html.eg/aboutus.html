@@ -1,0 +1,188 @@
+<style>
+  .lf-about-section {
+    background-color: #ffffff;
+    padding: 80px 20px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+  }
+
+  .lf-about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .lf-about-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .lf-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lf-about-img-wrapper {
+    flex: 1;
+  }
+
+  .lf-about-img-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    object-fit: cover;
+  }
+
+  .lf-about-text-wrapper {
+    flex: 1;
+  }
+
+  .lf-title-h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 15px;
+  }
+
+  .lf-title-h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #2c3e50;
+    margin-bottom: 25px;
+  }
+
+  .lf-desc {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  .lf-expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .lf-expertise-list li {
+    font-size: 14px;
+    font-weight: 600;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lf-expertise-list li::before {
+    content: '•';
+    color: #5ab15a;
+    font-size: 18px;
+  }
+
+  .lf-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .lf-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background-color: #5ab15a;
+    color: #ffffff !important;
+    border: 2px solid #5ab15a;
+  }
+
+  .lf-btn:hover {
+    background-color: #499849;
+    border-color: #499849;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(90, 177, 90, 0.25);
+  }
+
+  @media (max-width: 900px) {
+    .lf-about-row, .lf-row-reverse {
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .lf-expertise-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .lf-btn {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .lf-btn-group {
+      width: 100%;
+    }
+  }
+</style>
+
+<div class="lf-about-section">
+  <div class="lf-about-container">
+    
+    <div class="lf-about-row">
+      <div class="lf-about-img-wrapper">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/company.jpg" alt="Legendfeng Team">
+      </div>
+      
+      <div class="lf-about-text-wrapper">
+        <h2 class="lf-title-h2">Our Company</h2>
+        <h3 class="lf-title-h3">Guangzhou Legendfeng Apparel Co., Ltd.</h3>
+        <p class="lf-desc">With a management team backed by over 20 years of experience in premium outerwear manufacturing, we bring deep expertise in medium to heavyweight fabrics.</p>
+        <p class="lf-desc"><strong>Wool, Cashmere, Down, Technical Blends, and Performance outerwear.</strong></p>
+        <p class="lf-desc">From double-faced wool coats to premium denim costumes, our factory is built on precision, warmth, and trust.</p>
+        
+        <a href="https://lgfapparel.com/services" class="lf-btn">VIEW OUR SERVICES</a>
+      </div>
+    </div>
+    
+    <div class="lf-about-row lf-row-reverse">
+      <div class="lf-about-img-wrapper">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/Screenshot-2026-05-16-172335.png" alt="Legendfeng Craftsmanship">
+      </div>
+      
+      <div class="lf-about-text-wrapper">
+        <h2 class="lf-title-h2">Our Expertises</h2>
+        <p class="lf-desc">Explore our comprehensive manufacturing capabilities in premium mid-weight to heavyweight fabrics. From structured double-faced wool coats and premium denim costumes to versatile everyday wear, we bring precision craftsmanship to every garment category.</p>
+        
+        <ul class="lf-expertise-list">
+          <li>Premium Denim</li>
+          <li>Double-faced Wool</li>
+          <li>Worsted Wollen (suits & coats)</li>
+          <li>Knitwear (scarves, hats & gloves)</li>
+          <li>Activewear / Sportswear</li>
+          <li>Fashion Apparel (not main push)</li>
+          <li>Basic Underwear (not main push)</li>
+          <li>Jewelry (not main push)</li>
+        </ul>
+        
+        <div class="lf-btn-group">
+          <a href="https://lgfapparel.com/work" class="lf-btn">VIEW OUR PREVIOUS PRODUCTS</a>
+          <a href="#adv" class="lf-btn">VIEW OUR ADVANTAGES</a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>

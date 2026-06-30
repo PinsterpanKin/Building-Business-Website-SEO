@@ -1,0 +1,118 @@
+<style>
+  .lf-container { font-family: Arial, sans-serif; color: #333; max-width: 1200px; margin: 0 auto 50px auto; line-height: 1.6; }
+  .lf-header { text-align: center; margin-bottom: 50px; }
+  .lf-title { font-size: 28px; color: #2c3e50; font-weight: bold; margin-bottom: 15px; }
+  .lf-subtitle { font-size: 16px; color: #555; max-width: 800px; margin: 0 auto; font-style: italic; }
+  
+  /* 4阶段QC流程图 */
+  .qc-flow-container { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 50px; background: #f8f9fa; padding: 30px; border-radius: 8px; border: 1px solid #eaeaea; }
+  .qc-step { flex: 1; text-align: center; position: relative; padding: 0 10px; }
+  .qc-step:not(:last-child)::after { content: '→'; position: absolute; right: -10px; top: 20px; font-size: 24px; color: #ccc; }
+  .qc-icon { background: #2c3e50; color: #fff; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; font-size: 20px; font-weight: bold; margin: 0 auto 15px auto; }
+  .qc-step-title { font-size: 15px; font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
+  .qc-step-desc { font-size: 13px; color: #666; }
+
+  /* 通用表格 */
+  .lf-table-wrap { overflow-x: auto; margin-bottom: 40px; }
+  .lf-table { width: 100%; border-collapse: collapse; font-size: 14px; background: #fff; }
+  .lf-table th, .lf-table td { padding: 12px 15px; border: 1px solid #e0e0e0; text-align: left; }
+  .lf-table th { background-color: #2c3e50; color: #fff; font-weight: 600; width: 25%; }
+  .lf-table tr:hover { background-color: #f9f9f9; }
+</style>
+
+<div class="lf-container">
+
+  <div class="lf-header">
+    <h1 class="lf-title">Craft & Quality Control</h1>
+    <p class="lf-subtitle">Precision in every stitch. Control at every stage. From pattern making to final inspection, every garment we produce is built on decades of hands-on experience and a system designed for consistency.</p>
+  </div>
+
+  <!-- Part 1: Craftsmanship -->
+  <h2 class="lf-title" style="font-size: 22px;">1. Specialized Craftsmanship</h2>
+  <div class="lf-table-wrap">
+    <table class="lf-table">
+      <tbody>
+        <tr>
+          <th>Outerwear & Wool Coats</th>
+          <td><strong>Double-Faced Wool Joinery:</strong> Hand-stitched seams that open flat — no lining needed.<br>
+              <strong>Collar & Lapel Shaping:</strong> Precision fusing and pressing for a crisp roll.<br>
+              <strong>Bound Buttonholes:</strong> Hand-finished for a premium look.</td>
+        </tr>
+        <tr>
+          <th>Down Jackets & Puffers</th>
+          <td><strong>Baffle Box Construction:</strong> Inner fabric walls keep down evenly distributed.<br>
+              <strong>Down-Proof Stitching:</strong> Optimized needle size/density to prevent leakage.<br>
+              <strong>Fill Power Control:</strong> Precision filling by weight per chamber.</td>
+        </tr>
+        <tr>
+          <th>Pants & Trousers</th>
+          <td><strong>Reinforced Crotch Seam:</strong> Double-stitched/taped for durability on heavy fabrics.<br>
+              <strong>Waistband Construction:</strong> Interlining for shape retention, clean edges.<br>
+              <strong>Pleat & Crease Setting:</strong> Permanent crease setting for trousers.</td>
+        </tr>
+        <tr>
+          <th>Technical Outerwear</th>
+          <td><strong>Taped Seams & Laser Cutting:</strong> Fully sealed for waterproof construction.<br>
+              <strong>Vent & Pocket Engineering:</strong> Functional details positioned for ergonomics.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Part 2: Quality System Flow -->
+  <h2 class="lf-title" style="font-size: 22px; margin-top: 50px;">2. Our 4-Stage Quality Control System (AQL 2.5 / 4.0)</h2>
+  <div class="qc-flow-container">
+    <div class="qc-step">
+      <div class="qc-icon">1</div>
+      <div class="qc-step-title">Incoming QC</div>
+      <div class="qc-step-desc">Fabric 4-point check, down fill power testing, trims verification.</div>
+    </div>
+    <div class="qc-step">
+      <div class="qc-icon">2</div>
+      <div class="qc-step-title">In-Process QC</div>
+      <div class="qc-step-desc">First article approval & inline checks every 2 hours.</div>
+    </div>
+    <div class="qc-step">
+      <div class="qc-icon">3</div>
+      <div class="qc-step-title">Final QC</div>
+      <div class="qc-step-desc">100% visual inspection, measurement audit, needle detection.</div>
+    </div>
+    <div class="qc-step">
+      <div class="qc-icon">4</div>
+      <div class="qc-step-title">Pre-Shipment QC</div>
+      <div class="qc-step-desc">AQL random sampling, carton weight, third-party verification.</div>
+    </div>
+  </div>
+
+  <!-- Part 3: Testing Standards -->
+  <h2 class="lf-title" style="font-size: 22px;">3. Material & Garment Testing Standards</h2>
+  <div class="lf-table-wrap">
+    <table class="lf-table">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Testing Metrics & Standards</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Down & Fill Testing</strong></td>
+          <td><strong>Fill Power:</strong> IDFB / EN 12130 (500–900+ FP)<br>
+              <strong>Cleanliness:</strong> Oxygen Number ≤ 10, Turbidity ≥ 500 mm<br>
+              <strong>Certification:</strong> RDS (Responsible Down Standard) available.</td>
+        </tr>
+        <tr>
+          <td><strong>Fabric Testing</strong></td>
+          <td><strong>Shrinkage:</strong> AATCC 135 / ISO 6330<br>
+              <strong>Seam Slippage:</strong> ASTM D434 / ISO 13936<br>
+              <strong>Performance:</strong> Hydrostatic head, MVTR for waterproof/breathable.</td>
+        </tr>
+        <tr>
+          <td><strong>Third-Party & Audits</strong></td>
+          <td>We welcome <strong>SGS, Intertek, Bureau Veritas</strong> for on-site production or pre-shipment inspections. Live video and remote inspection support available.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

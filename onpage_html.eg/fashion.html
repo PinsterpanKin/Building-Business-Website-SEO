@@ -1,0 +1,235 @@
+<style>
+  /* --- 1. Fashion Apparel 页面整体背景与排版 --- */
+  .lf-fa-section {
+    background-color: #ffffff; /* 纯白底色，呈现高级时尚画报质感 */
+    padding: 80px 20px 100px 20px;
+    font-family: Arial, sans-serif;
+  }
+
+  .lf-fa-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .lf-fa-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .lf-fa-title {
+    font-size: 38px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .lf-fa-subtitle {
+    font-size: 16px;
+    color: #666666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* --- 2. 专为 7 张图定制的 6列网格布局 (2+3+2排版) --- */
+  .lf-fa-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important; /* 总共分为6份 */
+    gap: 30px; 
+  }
+
+  /* 第一排：第1、2张图各占 3份（50%宽度） */
+  .lf-fa-card:nth-child(1),
+  .lf-fa-card:nth-child(2) {
+    grid-column: span 3 !important;
+  }
+
+  /* 第二排：第3、4、5张图各占 2份（33.3%宽度） */
+  .lf-fa-card:nth-child(3),
+  .lf-fa-card:nth-child(4),
+  .lf-fa-card:nth-child(5) {
+    grid-column: span 2 !important;
+  }
+
+  /* 第三排：第6、7张图各占 3份（50%宽度），完美收尾对称 */
+  .lf-fa-card:nth-child(6),
+  .lf-fa-card:nth-child(7) {
+    grid-column: span 3 !important;
+  }
+
+  /* 图片卡片基础特效 */
+  .lf-fa-card {
+    border-radius: 6px;
+    overflow: hidden;
+    background: #f9f9f9;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .lf-fa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  }
+
+  /* 图片尺寸固定，去除了底部的文本区 */
+  .lf-fa-card img {
+    width: 100%;
+    height: 500px; /* 提升高度，呈现时尚大片感 */
+    object-fit: cover; 
+    display: block;
+    cursor: pointer; 
+    transition: opacity 0.3s;
+  }
+
+  .lf-fa-card img:hover {
+    opacity: 0.85; /* 交互暗示可点击 */
+  }
+
+  /* --- 3. 响应式调整 --- */
+  /* 平板端 (小于 900px) 变为两列布局 */
+  @media (max-width: 900px) {
+    .lf-fa-card:nth-child(n) {
+      grid-column: span 3 !important; 
+    }
+    .lf-fa-card img {
+      height: 400px;
+    }
+  }
+  
+  /* 手机端 (小于 600px) 变为单列大图布局 */
+  @media (max-width: 600px) {
+    .lf-fa-card:nth-child(n) {
+      grid-column: span 6 !important; 
+    }
+    .lf-fa-card img {
+      height: 350px; 
+    }
+  }
+
+  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
+  .lf-fa-lightbox {
+    display: none; 
+    position: fixed;
+    z-index: 99999; 
+    padding-top: 5vh;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(5px); 
+  }
+
+  .lf-fa-lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 4px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    object-fit: contain;
+    animation: lf-fa-zoom 0.3s ease; 
+  }
+
+  .lf-fa-lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .lf-fa-lightbox-close:hover {
+    color: #5ab15a; 
+  }
+
+  @keyframes lf-fa-zoom {
+    from {transform: scale(0.9); opacity: 0;} 
+    to {transform: scale(1); opacity: 1;}
+  }
+</style>
+
+<!-- 展示容器 -->
+<div class="lf-fa-section">
+  <div class="lf-fa-container">
+    
+    <!-- 页头介绍 -->
+    <div class="lf-fa-header">
+      <h1 class="lf-fa-title">Fashion Apparel</h1>
+      <p class="lf-fa-subtitle">Versatile, elegant, and contemporary everyday wear. Explore our modern fashion apparel production including woven tops, dresses, and casual separates with striking silhouettes.</p>
+    </div>
+    
+    <!-- 2+3+2 错落网格图片区 -->
+    <div class="lf-fa-grid">
+      <!-- Row 1: 2 Images -->
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.1.jpg">
+      </div>
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.2.jpg">
+      </div>
+      
+      <!-- Row 2: 3 Images -->
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.3.jpg">
+      </div>
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.4.jpg">
+      </div>
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.5.jpg">
+      </div>
+
+      <!-- Row 3: 2 Images -->
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.6.jpg">
+      </div>
+      <div class="lf-fa-card">
+        <img src="http://lgfapparel.com/wp-content/uploads/2026/05/6.7.jpg">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 隐藏的灯箱结构 -->
+<div id="lf-fa-lightbox" class="lf-fa-lightbox">
+  <span class="lf-fa-lightbox-close">&times;</span>
+  <img class="lf-fa-lightbox-content" id="lf-fa-lightbox-img">
+</div>
+
+<!-- 灯箱交互脚本 -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var modal = document.getElementById("lf-fa-lightbox");
+    var modalImg = document.getElementById("lf-fa-lightbox-img");
+    var images = document.querySelectorAll(".lf-fa-card img");
+
+    // 遍历所有图片，点击时加载大图
+    images.forEach(function(img) {
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+      }
+    });
+
+    // 点击 X 关闭
+    var span = document.getElementsByClassName("lf-fa-lightbox-close");
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+
+    // 点击背景黑底也能关闭
+    modal.onclick = function(e) {
+      if(e.target !== modalImg) {
+        modal.style.display = "none";
+      }
+    }
+  });
+</script>

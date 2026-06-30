@@ -1,0 +1,208 @@
+<style>
+
+  .lf-advantage-section {
+    background-color: #ffffff; 
+    padding: 90px 20px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+  }
+  
+  .lf-advantage-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+  
+  .lf-advantage-text-wrapper {
+    flex: 1.1; 
+  }
+  
+  .lf-subtitle-small {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5ab15a; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  
+  .lf-title-main {
+    font-size: 42px;
+    font-weight: 900;
+    color: #111827;
+    margin-bottom: 40px;
+    line-height: 1.2;
+  }
+  
+  .lf-adv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .lf-adv-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 16px;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+  
+  .lf-adv-number {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #5ab15a;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+  }
+  
+  .lf-adv-list li strong {
+    color: #111827;
+    font-size: 17px;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .lf-adv-btn-group {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .lf-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  /* button colors */
+  .lf-btn-primary {
+    background-color: #5ab15a;
+    color: #ffffff !important;
+    border: 2px solid #5ab15a;
+  }
+  
+  .lf-btn-primary:hover {
+    background-color: #499849;
+    border-color: #499849;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(90, 177, 90, 0.3);
+  }
+
+  .lf-btn-outline {
+    background-color: transparent;
+    color: #5ab15a !important;
+    border: 2px solid #5ab15a;
+  }
+
+  .lf-btn-outline:hover {
+    background-color: #5ab15a;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+  }
+  
+  /* image container */
+  .lf-advantage-img-wrapper {
+    flex: 0.9;
+    position: relative;
+  }
+  
+  .lf-advantage-img-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    object-fit: cover;
+  }
+  
+  @media (max-width: 900px) {
+    .lf-advantage-container {
+      flex-direction: column-reverse; 
+      gap: 40px;
+    }
+    .lf-title-main {
+      font-size: 32px;
+    }
+    .lf-adv-btn-group {
+      flex-direction: column;
+      width: 100%;
+    }
+    .lf-btn {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+</style>
+
+<div class="lf-advantage-section">
+  <div class="lf-advantage-container">
+    
+    <div class="lf-advantage-text-wrapper">
+      <span class="lf-subtitle-small">Why Global Brands Trust Us for Winter Collections</span>
+      <h2 class="lf-title-main">Our Core Advantages</h2>
+      
+      <ul class="lf-adv-list">
+        <li>
+          <div class="lf-adv-number">1</div>
+          <div>
+            <strong>Deep Material Expertise</strong>
+            Mastery of 50+ natural, blended, and performance fabrics for warmth and structure.
+          </div>
+        </li>
+        <li>
+          <div class="lf-adv-number">2</div>
+          <div>
+            <strong>Advanced Fill Power</strong>
+            Certified down (up to 900 FP) and eco-friendly synthetic insulation.
+          </div>
+        </li>
+        <li>
+          <div class="lf-adv-number">3</div>
+          <div>
+            <strong>Precision Craftsmanship</strong>
+            Specialized in double-faced wool, down-proof stitching, and technical outerwear.
+          </div>
+        </li>
+        <li>
+          <div class="lf-adv-number">4</div>
+          <div>
+            <strong>Reliable & Scalable</strong>
+            Consistent on-time delivery with flexible MOQ and end-to-end quality control.
+          </div>
+        </li>
+      </ul>
+      
+      <!-- botton links -->
+      <div class="lf-adv-btn-group">
+        <a href="https://lgfapparel.com/contact" class="lf-btn lf-btn-primary">REQUEST A QUOTE</a>
+        <a href="#top" class="lf-btn lf-btn-outline">BACK TO TOP</a>
+      </div>
+    </div>
+
+    <div class="lf-advantage-img-wrapper">
+      <!-- image link-->
+      <img src="http://lgfapparel.com/wp-content/uploads/2026/05/advantage.jpg" alt="Legendfeng Manufacturing Advantage">
+    </div>
+
+  </div>
+</div>
