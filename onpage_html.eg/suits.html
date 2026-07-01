@@ -1,7 +1,6 @@
 <style>
-  /* --- 1. Worsted & Woollen 页面整体背景与排版 --- */
   .lf-ww-section {
-    background-color: #ffffff; /* 纯白底色，突出西装与精纺面料的高级质感 */
+    background-color: #ffffff;
     padding: 80px 20px 100px 20px;
     font-family: Arial, sans-serif;
   }
@@ -33,14 +32,12 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 8 张图定制的 4列完美对称网格布局 (4x2) --- */
   .lf-ww-grid {
     display: grid !important;
-    grid-template-columns: repeat(4, 1fr) !important; /* 4列等分，展现严谨的西装定制感 */
+    grid-template-columns: repeat(4, 1fr) !important;
     gap: 30px; 
   }
 
-  /* 图片卡片基础特效（包含图片与下方文本） */
   .lf-ww-card {
     border-radius: 6px;
     overflow: hidden;
@@ -56,10 +53,9 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，确保网格绝对对齐 */
   .lf-ww-card img {
     width: 100%;
-    height: 380px; /* 适合4列宽度的绝佳纵横比 */
+    height: 380px;
     object-fit: cover; 
     display: block;
     cursor: pointer; 
@@ -68,10 +64,9 @@
   }
 
   .lf-ww-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85;
   }
 
-  /* 卡片底部文本区 (AI 描述) */
   .lf-ww-text {
     padding: 16px 15px;
     font-size: 14px;
@@ -79,14 +74,12 @@
     font-weight: 600;
     text-align: center;
     background-color: #ffffff;
-    flex-grow: 1; /* 确保文字区高度自动撑满对齐 */
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为两列布局 (即2x4排列) */
   @media (max-width: 900px) {
     .lf-ww-grid {
       grid-template-columns: repeat(2, 1fr) !important;
@@ -96,7 +89,6 @@
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列布局 */
   @media (max-width: 600px) {
     .lf-ww-grid {
       grid-template-columns: 1fr !important;
@@ -106,7 +98,6 @@
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
   .lf-ww-lightbox {
     display: none; 
     position: fixed;
@@ -132,7 +123,6 @@
     animation: lf-ww-zoom 0.3s ease; 
   }
 
-  /* 灯箱放大时的底部文字说明 */
   #lf-ww-lightbox-caption {
     margin: auto;
     display: block;
@@ -168,25 +158,22 @@
   }
 </style>
 
-<!-- 展示容器 -->
 <div class="lf-ww-section">
   <div class="lf-ww-container">
     
-    <!-- 页头介绍 -->
     <div class="lf-ww-header">
       <h1 class="lf-ww-title">Worsted & Woollen</h1>
       <p class="lf-ww-subtitle">Flawless tailoring for suits, trousers & coats. Built for precision fit and longevity, our tailoring capabilities shine in worsted and woollen garments with strictly structured waistbands and reinforced construction.</p>
     </div>
     
-    <!-- 4x2 网格图片与描述区 -->
     <div class="lf-ww-grid">
       
-      <!-- Item 1 (多色合并) -->
+      <!-- Item 1 -->
       <div class="lf-ww-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.1.png">
         <div class="lf-ww-text">Women's Wool Coats (Burgundy & Dark Brown)</div>
       </div>
-      <!-- Item 2 (多色合并) -->
+      <!-- Item 2  -->
       <div class="lf-ww-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/p3.2.png">
         <div class="lf-ww-text">Women's Wool Blazers (Navy, Brown & Cream)</div>
@@ -227,14 +214,12 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
 <div id="lf-ww-lightbox" class="lf-ww-lightbox">
   <span class="lf-ww-lightbox-close">&times;</span>
   <img class="lf-ww-lightbox-content" id="lf-ww-lightbox-img">
   <div id="lf-ww-lightbox-caption"></div>
 </div>
 
-<!-- 灯箱交互脚本 -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-ww-lightbox");
@@ -242,23 +227,19 @@
     var captionText = document.getElementById("lf-ww-lightbox-caption");
     var images = document.querySelectorAll(".lf-ww-card img");
 
-    // 遍历所有图片，点击时加载大图并同步底部文字
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        // 抓取同层级的文字描述，放入灯箱说明中
         captionText.innerHTML = this.nextElementSibling.innerHTML; 
       }
     });
 
-    // 点击 X 关闭
     var span = document.getElementsByClassName("lf-ww-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";

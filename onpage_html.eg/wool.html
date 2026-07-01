@@ -1,7 +1,6 @@
 <style>
-  /* --- 1. Double-Faced Wool 页面整体背景与排版 --- */
   .lf-dw-section {
-    background-color: #ffffff; /* 纯白底色，突出羊毛大衣的高级质感与垂坠感 */
+    background-color: #ffffff; 
     padding: 80px 20px 100px 20px;
     font-family: Arial, sans-serif;
   }
@@ -33,14 +32,12 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 15 张图定制的 3列网格布局 (正好5行) --- */
   .lf-dw-grid {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important; 
     gap: 30px; 
   }
 
-  /* 图片卡片基础特效（包含图片与下方文本） */
   .lf-dw-card {
     border-radius: 6px;
     overflow: hidden;
@@ -56,7 +53,6 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，大衣需要更高的高度以展现修长版型 */
   .lf-dw-card img {
     width: 100%;
     height: 500px; 
@@ -68,10 +64,9 @@
   }
 
   .lf-dw-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85;
   }
 
-  /* 卡片底部文本区 (AI 描述) */
   .lf-dw-text {
     padding: 16px 20px;
     font-size: 14px;
@@ -79,21 +74,18 @@
     font-weight: 600;
     text-align: center;
     background-color: #ffffff;
-    flex-grow: 1; /* 确保文字区高度自动撑满对齐 */
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为两列布局 */
   @media (max-width: 900px) {
     .lf-dw-grid {
       grid-template-columns: repeat(2, 1fr) !important;
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列布局 */
   @media (max-width: 600px) {
     .lf-dw-grid {
       grid-template-columns: 1fr !important;
@@ -103,7 +95,6 @@
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
   .lf-dw-lightbox {
     display: none; 
     position: fixed;
@@ -129,7 +120,6 @@
     animation: lf-dw-zoom 0.3s ease; 
   }
 
-  /* 灯箱放大时的底部文字说明 */
   #lf-dw-lightbox-caption {
     margin: auto;
     display: block;
@@ -165,17 +155,14 @@
   }
 </style>
 
-<!-- 展示容器 -->
 <div class="lf-dw-section">
   <div class="lf-dw-container">
     
-    <!-- 页头介绍 -->
     <div class="lf-dw-header">
       <h1 class="lf-dw-title">Double-Faced Wool</h1>
       <p class="lf-dw-subtitle">Our core strength. Uncompromising warmth and structure. Specializing in premium winter outerwear, our double-faced wool collection highlights our signature hand-stitched joinery. We create coats that open flat with clean finishes on both sides—requiring no lining, yet offering impeccable drape and luxurious warmth.</p>
     </div>
     
-    <!-- 3x5 网格图片与描述区 -->
     <div class="lf-dw-grid">
       
       <!-- Item 1 -->
@@ -215,12 +202,12 @@
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.7.jpg">
         <div class="lf-dw-text">Women's Wool Cape (Pure White, Fringed Hem)</div>
       </div>
-      <!-- Item 8 (两件不同色) -->
+      <!-- Item 8 -->
       <div class="lf-dw-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.8.jpg">
         <div class="lf-dw-text">Women's Coats (Charcoal Grey & Pure White, Double-Breasted)</div>
       </div>
-      <!-- Item 9 (两件不同色) -->
+      <!-- Item 9 -->
       <div class="lf-dw-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.9.jpg">
         <div class="lf-dw-text">Women's Coats (Sand Beige & Dark Grey)</div>
@@ -236,18 +223,18 @@
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.11.jpg">
         <div class="lf-dw-text">Women's Double-Faced Coat (Midnight Black & Red Lining)</div>
       </div>
-      <!-- Item 12 (四件不同色) -->
+      <!-- Item 12 -->
       <div class="lf-dw-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.12.jpg">
         <div class="lf-dw-text">Women's Fringed Coats (Black, White, Grey & Camel)</div>
       </div>
 
-      <!-- Item 13 (两件不同色) -->
+      <!-- Item 13 -->
       <div class="lf-dw-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.13.jpg">
         <div class="lf-dw-text">Women's Coats (Black & Burgundy, Scarf Neck)</div>
       </div>
-      <!-- Item 14 (两件不同色) -->
+      <!-- Item 14 -->
       <div class="lf-dw-card">
         <img src="http://lgfapparel.com/wp-content/uploads/2026/05/2.14.jpg">
         <div class="lf-dw-text">Women's Minimalist Coats (Mocha & Light Grey)</div>
@@ -262,14 +249,12 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
 <div id="lf-dw-lightbox" class="lf-dw-lightbox">
   <span class="lf-dw-lightbox-close">&times;</span>
   <img class="lf-dw-lightbox-content" id="lf-dw-lightbox-img">
   <div id="lf-dw-lightbox-caption"></div>
 </div>
 
-<!-- 灯箱交互脚本 -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-dw-lightbox");
@@ -277,23 +262,19 @@
     var captionText = document.getElementById("lf-dw-lightbox-caption");
     var images = document.querySelectorAll(".lf-dw-card img");
 
-    // 遍历所有图片，点击时加载大图并同步底部文字
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        // 抓取同层级的文字描述，放入灯箱说明中
         captionText.innerHTML = this.nextElementSibling.innerHTML; 
       }
     });
 
-    // 点击 X 关闭
     var span = document.getElementsByClassName("lf-dw-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";
