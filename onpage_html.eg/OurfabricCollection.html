@@ -215,14 +215,14 @@
   </div>
 </div>
 
-<!-- --- 3. 隐藏的灯箱容器结构 --- -->
+<!-- --- 3. Hidden lightbox container structure --- -->
 <div id="lf-lightbox" class="lf-lightbox">
   <span class="lf-lightbox-close">&times;</span>
   <img class="lf-lightbox-content" id="lf-lightbox-img">
   <div id="lf-lightbox-caption"></div>
 </div>
 
-<!-- --- 4. 触发放大的交互脚本 --- -->
+<!-- --- 4. Interaction script to trigger zoom --- -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-lightbox");
@@ -230,23 +230,25 @@
     var captionText = document.getElementById("lf-lightbox-caption");
     var images = document.querySelectorAll(".lf-fabric-card img");
 
-    // 遍历所有图片，点击时将图片链接和下方文字填入大灯箱并显示
+    // Loop through images; on click, show image and its caption in the lightbox
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        // 自动抓取同卡片下 .lf-fabric-text 里的文字作为标题
+        // Automatically use the `.lf-fabric-text` content within the same card as the caption
         captionText.innerHTML = this.nextElementSibling.innerHTML; 
       }
     });
 
-    // 点击右上角X关闭
+   
     var span = document.getElementsByClassName("lf-lightbox-close");
+    // Click the top-right X to close
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
+  
+    // Clicking the dark background will also close
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";
