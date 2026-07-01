@@ -1,5 +1,4 @@
 <style>
-  /* --- 整体背景区块，延续 Work 页面的优雅浅绿色背景 --- */
   .lf-svc-section {
     background-color: #eef5eb; 
     padding: 80px 20px 100px 20px;
@@ -7,16 +6,14 @@
     color: #333333;
   }
   
-  /* 居中内容容器 */
   .lf-svc-container {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 100px; /* 每个服务版块之间的超大呼吸间距 */
+    gap: 100px; 
   }
 
-  /* 页面顶部标题居中介绍 */
   .lf-svc-header {
     text-align: center;
     margin-bottom: 20px;
@@ -39,19 +36,16 @@
     line-height: 1.6;
   }
   
-  /* 左右排版的行 */
   .lf-svc-row {
     display: flex;
     align-items: center;
     gap: 60px;
   }
   
-  /* 左右交替反转 */
   .lf-row-reverse {
     flex-direction: row-reverse;
   }
   
-  /* 文本区 */
   .lf-svc-text-wrapper {
     flex: 1;
   }
@@ -79,7 +73,6 @@
     margin-bottom: 30px;
   }
   
-  /* 图片区 */
   .lf-svc-img-wrapper {
     flex: 1;
   }
@@ -93,7 +86,6 @@
     display: block;
   }
   
-  /* 绿色按钮样式 */
   .lf-btn-green {
     display: inline-block;
     padding: 14px 36px;
@@ -116,7 +108,6 @@
     box-shadow: 0 6px 15px rgba(90, 177, 90, 0.3);
   }
   
-  /* 响应式设计：手机端全部变为上下堆叠 */
   @media (max-width: 900px) {
     .lf-svc-row, .lf-row-reverse {
       flex-direction: column;
@@ -145,7 +136,6 @@
 
   <div class="lf-svc-container">
     
-    <!-- 1. Capabilities (图右，文左) -->
     <div class="lf-svc-row">
       <div class="lf-svc-text-wrapper">
         <h2 class="lf-svc-title">Capabilities</h2>
@@ -154,12 +144,10 @@
         <a href="/capabilities" class="lf-btn-green">EXPLORE CAPABILITIES</a>
       </div>
       <div class="lf-svc-img-wrapper">
-        <!-- 请填入代表工厂规模/机器设备的图片链接 -->
         <img src="" alt="Legendfeng Production Capabilities">
       </div>
     </div>
 
-    <!-- 2. Craft & Quality (图左，文右) -->
     <div class="lf-svc-row lf-row-reverse">
       <div class="lf-svc-text-wrapper">
         <h2 class="lf-svc-title">Craft & Quality</h2>
@@ -168,12 +156,10 @@
         <a href="/craft-quality" class="lf-btn-green">VIEW QUALITY STANDARDS</a>
       </div>
       <div class="lf-svc-img-wrapper">
-        <!-- 请填入代表精细缝纫/手工/质检的图片链接 -->
         <img src="" alt="Legendfeng Craft and Quality Control">
       </div>
     </div>
 
-    <!-- 3. Partnership (图右，文左) -->
     <div class="lf-svc-row">
       <div class="lf-svc-text-wrapper">
         <h2 class="lf-svc-title">Partnership</h2>
@@ -182,7 +168,6 @@
         <a href="/partnership" class="lf-btn-green">DISCOVER OUR PROCESS</a>
       </div>
       <div class="lf-svc-img-wrapper">
-        <!-- 请填入代表商务会议/团队沟通/打包出货的图片链接 -->
         <img src="" alt="Legendfeng OEM Partnership">
       </div>
     </div>

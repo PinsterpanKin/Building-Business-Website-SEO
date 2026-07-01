@@ -1,7 +1,14 @@
+
+<!--
+  Data Bar component: presents four key metrics as animated counters.
+  - Purpose: visually highlight factory/brand statistics (years, fabrics, fill power, AQL stage).
+  - Behavior: CSS styles the grid and numbers; JS animates count-up when the section scrolls into view.
+  - Usage: drop this component into any page section to display quick stats; it's purely presentational.
+-->
+
 <style>
-  /* --- 1. 数据条整体背景 --- */
   .lf-stats-section {
-    background-color: #111827; /* 深石墨色背景，带来强烈的专业与高级感 */
+    background-color: #111827; 
     padding: 70px 20px;
     font-family: Arial, sans-serif;
     color: #ffffff;
@@ -13,10 +20,9 @@
     margin: 0 auto;
   }
 
-  /* --- 2. 四列网格布局 --- */
   .lf-stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 桌面端4列等分 */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 40px;
   }
 
@@ -28,20 +34,19 @@
     padding: 20px;
   }
 
-  /* --- 3. 滚动的数字与符号样式 --- */
   .lf-stat-number-wrapper {
     display: flex;
     align-items: baseline;
     justify-content: center;
     margin-bottom: 12px;
-    color: #5ab15a; /* 主题绿，在深色背景上极其抢眼 */
+    color: #5ab15a; 
   }
 
   .lf-counter-value {
     font-size: 56px;
     font-weight: 900;
     line-height: 1;
-    font-variant-numeric: tabular-nums; /* 确保数字滚动时宽度稳定不跳动 */
+    font-variant-numeric: tabular-nums; 
   }
 
   .lf-stat-suffix {
@@ -50,25 +55,22 @@
     margin-left: 4px;
   }
 
-  /* --- 4. 底部说明文字 --- */
   .lf-stat-label {
     font-size: 15px;
     font-weight: 600;
-    color: #9ca3af; /* 优雅的浅灰色 */
+    color: #9ca3af;
     text-transform: uppercase;
     letter-spacing: 1.5px;
     line-height: 1.5;
   }
 
   .lf-stat-label strong {
-    color: #ffffff; /* 强调词用纯白色突出 */
+    color: #ffffff; 
     display: block;
     font-size: 17px;
     margin-bottom: 4px;
   }
 
-  /* --- 5. 响应式适配 --- */
-  /* 平板端变为2行2列 */
   @media (max-width: 900px) {
     .lf-stats-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -78,7 +80,6 @@
     .lf-stat-suffix { font-size: 34px; }
   }
 
-  /* 手机端变为单列垂直排列 */
   @media (max-width: 600px) {
     .lf-stats-grid {
       grid-template-columns: 1fr;
@@ -87,22 +88,19 @@
   }
 </style>
 
-<!-- 数据条 HTML 结构 -->
 <div class="lf-stats-section">
   <div class="lf-stats-container">
     <div class="lf-stats-grid">
       
-      <!-- 数据 1 -->
       <div class="lf-stat-item">
         <div class="lf-stat-number-wrapper">
-          <!-- data-target 设定最终数字 -->
+          
           <span class="lf-counter-value" data-target="20">0</span>
           <span class="lf-stat-suffix">+</span>
         </div>
         <div class="lf-stat-label"><strong>Years</strong> of Management Experience</div>
       </div>
 
-      <!-- 数据 2 -->
       <div class="lf-stat-item">
         <div class="lf-stat-number-wrapper">
           <span class="lf-counter-value" data-target="50">0</span>
@@ -111,7 +109,6 @@
         <div class="lf-stat-label"><strong>Premium Fabrics</strong> Mastered & Sourced</div>
       </div>
 
-      <!-- 数据 3 -->
       <div class="lf-stat-item">
         <div class="lf-stat-number-wrapper">
           <span class="lf-counter-value" data-target="900">0</span>
@@ -120,11 +117,10 @@
         <div class="lf-stat-label"><strong>Fill Power</strong> Certified Down Standard</div>
       </div>
 
-      <!-- 数据 4 -->
       <div class="lf-stat-item">
         <div class="lf-stat-number-wrapper">
           <span class="lf-counter-value" data-target="4">0</span>
-          <span class="lf-stat-suffix"></span> <!-- 这个数字后面不需要 + 号 -->
+          <span class="lf-stat-suffix"></span> 
         </div>
         <div class="lf-stat-label"><strong>Stage</strong> AQL Quality Control System</div>
       </div>
@@ -133,12 +129,11 @@
   </div>
 </div>
 
-<!-- 触发数字滚动的极简 JavaScript 引擎 -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const counters = document.querySelectorAll('.lf-counter-value');
     
-    // 配置观察器：当元素露出屏幕 30% 时触发
+
     const observerOptions = {
       root: null,
       threshold: 0.3
@@ -149,7 +144,6 @@
         if (entry.isIntersecting) {
           const counter = entry.target;
           const target = +counter.getAttribute('data-target');
-          // 动画总时长 2000毫秒 (2秒)，计算每一帧的增量
           const duration = 2000;
           const increment = target / (duration / 16); 
 
@@ -158,14 +152,13 @@
             current += increment;
             if (current < target) {
               counter.innerText = Math.ceil(current);
-              requestAnimationFrame(updateCounter); // 保持60fps极度丝滑的滚动
+              requestAnimationFrame(updateCounter); 
             } else {
-              counter.innerText = target; // 确保最终精确落在目标数字
+              counter.innerText = target; 
             }
           };
           
           updateCounter();
-          // 触发一次后取消观察，避免用户上下滑动页面时数字反复重置
           observer.unobserve(counter); 
         }
       });

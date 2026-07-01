@@ -1,7 +1,6 @@
 <style>
-  /* --- 1. Jewelry 页面整体背景与排版 --- */
   .lf-jw-section {
-    background-color: #ffffff; /* 珠宝展示使用纯白底色最能凸显质感 */
+    background-color: #ffffff; 
     padding: 80px 20px 100px 20px;
     font-family: Arial, sans-serif;
   }
@@ -33,25 +32,21 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 5 张图定制的 6列网格布局 --- */
   .lf-jw-grid {
     display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important; /* 总共分为6份 */
+    grid-template-columns: repeat(6, 1fr) !important;
     gap: 30px; 
   }
 
-  /* 第一、第二张图各占 3份（即各占 50%），形成第一排 2张大图 */
   .lf-jw-card:nth-child(1),
   .lf-jw-card:nth-child(2) {
     grid-column: span 3 !important;
   }
 
-  /* 第三、四、五张图各占 2份（即各占 33.3%），形成第二排 3张图 */
   .lf-jw-card:nth-child(n+3) {
     grid-column: span 2 !important;
   }
 
-  /* 图片卡片基础特效 */
   .lf-jw-card {
     border-radius: 6px;
     overflow: hidden;
@@ -65,10 +60,9 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，确保网格对齐，去除了底部的文本区 */
   .lf-jw-card img {
     width: 100%;
-    height: 450px; /* 统一高度，完美展现配饰细节 */
+    height: 450px;
     object-fit: cover; 
     display: block;
     cursor: pointer; 
@@ -76,28 +70,24 @@
   }
 
   .lf-jw-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85; 
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为全部两列布局 */
   @media (max-width: 900px) {
     .lf-jw-card:nth-child(n) {
       grid-column: span 3 !important; 
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列大图布局 */
   @media (max-width: 600px) {
     .lf-jw-card:nth-child(n) {
       grid-column: span 6 !important; 
     }
     .lf-jw-card img {
-      height: 350px; /* 手机端稍微降低图片高度 */
+      height: 350px;
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
   .lf-lightbox {
     display: none; 
     position: fixed;
@@ -144,7 +134,6 @@
   }
 </style>
 
-<!-- 展示容器 -->
 <div class="lf-jw-section">
   <div class="lf-jw-container">
     
@@ -179,20 +168,17 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
 <div id="lf-lightbox" class="lf-lightbox">
   <span class="lf-lightbox-close">&times;</span>
   <img class="lf-lightbox-content" id="lf-lightbox-img">
 </div>
 
-<!-- 灯箱交互脚本 -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-lightbox");
     var modalImg = document.getElementById("lf-lightbox-img");
     var images = document.querySelectorAll(".lf-jw-card img");
 
-    // 遍历所有图片，点击时加载大图
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
@@ -200,13 +186,11 @@
       }
     });
 
-    // 点击 X 关闭
     var span = document.getElementsByClassName("lf-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";

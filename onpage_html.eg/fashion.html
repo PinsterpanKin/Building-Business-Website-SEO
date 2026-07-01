@@ -1,7 +1,7 @@
 <style>
-  /* --- 1. Fashion Apparel 页面整体背景与排版 --- */
+  /* --- 1. Fashion Apparel overall background and typography --- */
   .lf-fa-section {
-    background-color: #ffffff; /* 纯白底色，呈现高级时尚画报质感 */
+    background-color: #ffffff; /* Clean white background for editorial look */
     padding: 80px 20px 100px 20px;
     font-family: Arial, sans-serif;
   }
@@ -33,33 +33,33 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 7 张图定制的 6列网格布局 (2+3+2排版) --- */
+  /* --- 2. 6-column grid layout for 7 images (2+3+2 layout) --- */
   .lf-fa-grid {
     display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important; /* 总共分为6份 */
+    grid-template-columns: repeat(6, 1fr) !important; /* divided into 6 equal columns */
     gap: 30px; 
   }
 
-  /* 第一排：第1、2张图各占 3份（50%宽度） */
+  /* Row 1: items 1 and 2 span 3 columns each (50% width) */
   .lf-fa-card:nth-child(1),
   .lf-fa-card:nth-child(2) {
     grid-column: span 3 !important;
   }
 
-  /* 第二排：第3、4、5张图各占 2份（33.3%宽度） */
+  /* Row 2: items 3,4,5 span 2 columns each (33.3% width) */
   .lf-fa-card:nth-child(3),
   .lf-fa-card:nth-child(4),
   .lf-fa-card:nth-child(5) {
     grid-column: span 2 !important;
   }
 
-  /* 第三排：第6、7张图各占 3份（50%宽度），完美收尾对称 */
+  /* Row 3: items 6 and 7 span 3 columns each (50% width) for symmetry */
   .lf-fa-card:nth-child(6),
   .lf-fa-card:nth-child(7) {
     grid-column: span 3 !important;
   }
 
-  /* 图片卡片基础特效 */
+  /* Image card base effects */
   .lf-fa-card {
     border-radius: 6px;
     overflow: hidden;
@@ -73,10 +73,10 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，去除了底部的文本区 */
+  /* Fixed image sizes; no bottom text area */
   .lf-fa-card img {
     width: 100%;
-    height: 500px; /* 提升高度，呈现时尚大片感 */
+    height: 500px;
     object-fit: cover; 
     display: block;
     cursor: pointer; 
@@ -84,11 +84,11 @@
   }
 
   .lf-fa-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85;
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为两列布局 */
+  /* --- 3. Responsive adjustments --- */
+  /* Tablet: two-column layout under 900px */
   @media (max-width: 900px) {
     .lf-fa-card:nth-child(n) {
       grid-column: span 3 !important; 
@@ -98,7 +98,7 @@
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列大图布局 */
+  /* Mobile: single-column large images under 600px */
   @media (max-width: 600px) {
     .lf-fa-card:nth-child(n) {
       grid-column: span 6 !important; 
@@ -108,7 +108,7 @@
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
+  /* --- 4. Lightbox styles for image zoom --- */
   .lf-fa-lightbox {
     display: none; 
     position: fixed;
@@ -155,17 +155,17 @@
   }
 </style>
 
-<!-- 展示容器 -->
+<!-- Display container -->
 <div class="lf-fa-section">
   <div class="lf-fa-container">
     
-    <!-- 页头介绍 -->
+    <!-- Header intro -->
     <div class="lf-fa-header">
       <h1 class="lf-fa-title">Fashion Apparel</h1>
       <p class="lf-fa-subtitle">Versatile, elegant, and contemporary everyday wear. Explore our modern fashion apparel production including woven tops, dresses, and casual separates with striking silhouettes.</p>
     </div>
     
-    <!-- 2+3+2 错落网格图片区 -->
+    <!-- 2+3+2 staggered grid of images -->
     <div class="lf-fa-grid">
       <!-- Row 1: 2 Images -->
       <div class="lf-fa-card">
@@ -198,20 +198,20 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
+<!-- Hidden lightbox structure -->
 <div id="lf-fa-lightbox" class="lf-fa-lightbox">
   <span class="lf-fa-lightbox-close">&times;</span>
   <img class="lf-fa-lightbox-content" id="lf-fa-lightbox-img">
 </div>
 
-<!-- 灯箱交互脚本 -->
+<!-- Lightbox interaction script -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-fa-lightbox");
     var modalImg = document.getElementById("lf-fa-lightbox-img");
     var images = document.querySelectorAll(".lf-fa-card img");
 
-    // 遍历所有图片，点击时加载大图
+    // Loop through images; on click, load the large image
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
@@ -219,13 +219,13 @@
       }
     });
 
-    // 点击 X 关闭
+    // Click the X to close
     var span = document.getElementsByClassName("lf-fa-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
+    // Clicking the dark background will also close
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";

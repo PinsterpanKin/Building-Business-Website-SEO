@@ -1,7 +1,7 @@
 <style>
-  /* --- 1. Denim 页面整体背景与排版 --- */
+  /* --- 1. Denim overall background and typography --- */
   .lf-dn-section {
-    background-color: #ffffff; /* 纯白底色，突出牛仔的洗水质感与细节 */
+    background-color: #ffffff;
     padding: 80px 20px 100px 20px;
     font-family: Arial, sans-serif;
   }
@@ -33,14 +33,14 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 9 张图定制的 3列网格布局 --- */
+  /* --- 2. 3-column grid layout for 9 images --- */
   .lf-dn-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 经典3等分，正好排3行 */
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 30px; 
   }
 
-  /* 图片卡片基础特效（包含图片与下方文本） */
+  /* Image card base effects (image plus text) */
   .lf-dn-card {
     border-radius: 6px;
     overflow: hidden;
@@ -56,10 +56,9 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，确保网格对齐 */
   .lf-dn-card img {
     width: 100%;
-    height: 480px; /* 较高的高度以展现裤装/全身的版型 */
+    height: 480px;
     object-fit: cover; 
     display: block;
     cursor: pointer; 
@@ -68,10 +67,10 @@
   }
 
   .lf-dn-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85;
   }
 
-  /* 卡片底部文本区 (AI 描述) */
+  /* Card bottom text area */
   .lf-dn-text {
     padding: 16px 20px;
     font-size: 15px;
@@ -79,21 +78,21 @@
     font-weight: 600;
     text-align: center;
     background-color: #ffffff;
-    flex-grow: 1; /* 确保文字区高度自动撑满对齐 */
+    flex-grow: 1; 
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为两列布局 */
+  /* --- 3. Responsive adjustments --- */
+  /* Tablet: two-column layout under 900px */
   @media (max-width: 900px) {
     .lf-dn-grid {
       grid-template-columns: repeat(2, 1fr) !important;
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列布局 */
+  /* Mobile: single-column layout under 600px */
   @media (max-width: 600px) {
     .lf-dn-grid {
       grid-template-columns: 1fr !important;
@@ -103,7 +102,7 @@
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
+  /* --- 4. Lightbox styles for image zoom --- */
   .lf-dn-lightbox {
     display: none; 
     position: fixed;
@@ -129,7 +128,7 @@
     animation: lf-dn-zoom 0.3s ease; 
   }
 
-  /* 灯箱放大时的底部文字说明 */
+  /* Caption shown under enlarged lightbox image */
   #lf-dn-lightbox-caption {
     margin: auto;
     display: block;
@@ -165,17 +164,17 @@
   }
 </style>
 
-<!-- 展示容器 -->
+<!-- Display container -->
 <div class="lf-dn-section">
   <div class="lf-dn-container">
     
-    <!-- 页头介绍 -->
+    <!-- Header intro -->
     <div class="lf-dn-header">
       <h1 class="lf-dn-title">Premium Denim</h1>
       <p class="lf-dn-subtitle">Engineered for durability, crafted for timeless style. Our premium denim manufacturing covers rigid and stretch fabrics with precise chain-stitch hemming and advanced local wash capabilities.</p>
     </div>
     
-    <!-- 3x3 网格图片与描述区 -->
+    <!-- 3x3 grid: images and description area -->
     <div class="lf-dn-grid">
       
       <!-- Item 1 -->
@@ -230,14 +229,14 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
+<!-- Hidden lightbox structure -->
 <div id="lf-dn-lightbox" class="lf-dn-lightbox">
   <span class="lf-dn-lightbox-close">&times;</span>
   <img class="lf-dn-lightbox-content" id="lf-dn-lightbox-img">
   <div id="lf-dn-lightbox-caption"></div>
 </div>
 
-<!-- 灯箱交互脚本 -->
+<!-- Lightbox interaction script -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-dn-lightbox");
@@ -245,23 +244,23 @@
     var captionText = document.getElementById("lf-dn-lightbox-caption");
     var images = document.querySelectorAll(".lf-dn-card img");
 
-    // 遍历所有图片，点击时加载大图并同步底部文字
+    // Loop through images; on click, load the large image and sync the caption
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        // 抓取同层级的文字描述，放入灯箱说明中
+        // Grab the sibling text description and insert into the lightbox caption
         captionText.innerHTML = this.nextElementSibling.innerHTML; 
       }
     });
 
-    // 点击 X 关闭
+    // Click the X to close
     var span = document.getElementsByClassName("lf-dn-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
+    // Clicking the dark background will also close
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";
