@@ -1,5 +1,5 @@
 <style>
-  /* --- 1. Activewear 页面整体背景与排版 --- */
+  /* --- 1. Activewear overall background and typography --- */
   .lf-aw-section {
     background-color: #ffffff; 
     padding: 80px 20px 100px 20px;
@@ -33,40 +33,40 @@
     line-height: 1.6;
   }
 
-  /* --- 2. 专为 10 张图定制的 6列动态网格布局 (2+3+2+3) --- */
+  /* --- 2. 6-column dynamic grid for 10 images (2+3+2+3) --- */
   .lf-aw-grid {
     display: grid !important;
-    grid-template-columns: repeat(6, 1fr) !important; /* 总共分为6等份 */
+    grid-template-columns: repeat(6, 1fr) !important; /* divided into 6 equal columns */
     gap: 30px; 
   }
 
-  /* 第1排 (2张图)：各占 3份（50%宽度） */
+  /* Row 1 (2 images): each spans 3 columns (50% width) */
   .lf-aw-card:nth-child(1),
   .lf-aw-card:nth-child(2) {
     grid-column: span 3 !important;
   }
 
-  /* 第2排 (3张图)：各占 2份（33.3%宽度） */
+  /* Row 2 (3 images): each spans 2 columns (33.3% width) */
   .lf-aw-card:nth-child(3),
   .lf-aw-card:nth-child(4),
   .lf-aw-card:nth-child(5) {
     grid-column: span 2 !important;
   }
 
-  /* 第3排 (2张图)：各占 3份（50%宽度，适合展现长款风衣） */
+  /* Row 3 (2 images): each spans 3 columns (50% width) */
   .lf-aw-card:nth-child(6),
   .lf-aw-card:nth-child(7) {
     grid-column: span 3 !important;
   }
 
-  /* 第4排 (3张图)：各占 2份（33.3%宽度，适合运动裤和卫衣） */
+  /* Row 4 (3 images): each spans 2 columns (33.3% width) */
   .lf-aw-card:nth-child(8),
   .lf-aw-card:nth-child(9),
   .lf-aw-card:nth-child(10) {
     grid-column: span 2 !important;
   }
 
-  /* 图片卡片基础特效（包含图片与下方文本） */
+  /* Image card base effects (image + caption) */
   .lf-aw-card {
     border-radius: 6px;
     overflow: hidden;
@@ -82,7 +82,7 @@
     box-shadow: 0 15px 30px rgba(0,0,0,0.08);
   }
 
-  /* 图片尺寸固定，确保不同宽度的卡片内部图片高度一致 */
+  /* Fixed image height to keep visual alignment across varying card widths */
   .lf-aw-card img {
     width: 100%;
     height: 450px; 
@@ -94,10 +94,10 @@
   }
 
   .lf-aw-card img:hover {
-    opacity: 0.85; /* 交互暗示可点击 */
+    opacity: 0.85;
   }
 
-  /* 卡片底部文本区 (AI 描述) */
+  /* Card bottom text area (caption) */
   .lf-aw-text {
     padding: 16px 20px;
     font-size: 14px;
@@ -111,15 +111,15 @@
     justify-content: center;
   }
 
-  /* --- 3. 响应式调整 --- */
-  /* 平板端 (小于 900px) 变为全部两列布局 */
+  /* --- 3. Responsive adjustments --- */
+  /* Tablet: two-column layout under 900px */
   @media (max-width: 900px) {
     .lf-aw-card:nth-child(n) {
       grid-column: span 3 !important; 
     }
   }
   
-  /* 手机端 (小于 600px) 变为单列布局 */
+  /* Mobile: single-column layout under 600px */
   @media (max-width: 600px) {
     .lf-aw-card:nth-child(n) {
       grid-column: span 6 !important; 
@@ -129,7 +129,7 @@
     }
   }
 
-  /* --- 4. 点击放大的灯箱 (Lightbox) 样式 --- */
+  /* --- 4. Lightbox styles for image zoom --- */
   .lf-aw-lightbox {
     display: none; 
     position: fixed;
@@ -155,7 +155,7 @@
     animation: lf-aw-zoom 0.3s ease; 
   }
 
-  /* 灯箱放大时的底部文字说明 */
+  /* Caption shown under the enlarged lightbox image */
   #lf-aw-lightbox-caption {
     margin: auto;
     display: block;
@@ -191,17 +191,17 @@
   }
 </style>
 
-<!-- 展示容器 -->
+<!-- Display container -->
 <div class="lf-aw-section">
   <div class="lf-aw-container">
     
-    <!-- 页头介绍 -->
+    <!-- Header intro -->
     <div class="lf-aw-header">
       <h1 class="lf-aw-title">Activewear / Sportswear</h1>
       <p class="lf-aw-subtitle">Built for dynamic movement and high performance. We utilize technical blends, stretch fabrics, and specialized stitching to construct sportswear that meets the demands of active consumers.</p>
     </div>
     
-    <!-- 2+3+2+3 动态网格图片与描述区 -->
+    <!-- 2+3+2+3 dynamic grid: images and captions -->
     <div class="lf-aw-grid">
       
       <!-- Row 1: 2 Images -->
@@ -256,14 +256,14 @@
   </div>
 </div>
 
-<!-- 隐藏的灯箱结构 -->
+<!-- Hidden lightbox structure -->
 <div id="lf-aw-lightbox" class="lf-aw-lightbox">
   <span class="lf-aw-lightbox-close">&times;</span>
   <img class="lf-aw-lightbox-content" id="lf-aw-lightbox-img">
   <div id="lf-aw-lightbox-caption"></div>
 </div>
 
-<!-- 灯箱交互脚本 -->
+<!-- Lightbox interaction script -->
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     var modal = document.getElementById("lf-aw-lightbox");
@@ -271,23 +271,23 @@
     var captionText = document.getElementById("lf-aw-lightbox-caption");
     var images = document.querySelectorAll(".lf-aw-card img");
 
-    // 遍历所有图片，点击时加载大图并同步底部文字
+    // Loop through images; on click, display large image and caption
     images.forEach(function(img) {
       img.onclick = function() {
         modal.style.display = "block";
         modalImg.src = this.src;
-        // 抓取同层级的文字描述，放入灯箱说明中
+        // Grab the sibling caption and insert into the lightbox
         captionText.innerHTML = this.nextElementSibling.innerHTML; 
       }
     });
 
-    // 点击 X 关闭
+    // Click the X to close
     var span = document.getElementsByClassName("lf-aw-lightbox-close");
     span.onclick = function() { 
       modal.style.display = "none";
     }
 
-    // 点击背景黑底也能关闭
+    // Clicking the dark background will also close
     modal.onclick = function(e) {
       if(e.target !== modalImg) {
         modal.style.display = "none";
